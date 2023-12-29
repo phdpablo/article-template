@@ -1,0 +1,86 @@
+project:
+  type: book
+  output-dir: docs
+execute: 
+  #echo: false
+  warning: false
+#filters: 
+  #- webr
+  #- abstract-section:
+book:
+  title: "Smart Choices for Measurement Models"
+  subtitle: "Dynamic Tutorial for your Confirmatory Factor Analysis in R Environment"
+  author: "Pablo Rogers"
+  date: 12/27/2023
+  date-format: long
+  #doi:
+  cover-image: img/cover.png
+  downloads: pdf
+  reader-mode: true
+  sidebar:
+    align: left
+    collapse-level: 1
+  page-footer:
+    left: <a href="https://www.phdpablo.com">by Pablo Rogers</a>
+    right: This article was built with <a href="https://quarto.org/">Quarto</a> 
+  site-url: "https://phdpablo.github.io/smart-cfa/"
+  repo-url: "https://github.com/phdpablo/smart-cfa/"
+  #repo-actions: [edit,issue]
+  sharing: [twitter, facebook, linkedin]
+  open-graph: true
+  
+  chapters:
+    - index.qmd
+    - 01-intro.qmd
+    - 02-smart-choices.qmd
+    - 03-model.qmd
+    - 04-tutorial.qmd
+    - 05-considerations.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    title-block-style: none
+    toc: true
+    collapse: true
+    html-math-method: mathjax
+    #include-in-header: header-includes.html
+    #css: style.css
+    #code-link: true
+    theme:
+      light: flatly
+      dark: darkly
+    number-sections: true
+    link-external-newwindow: true
+    fig-width: 5
+    fig-height: 5
+    fig-align: left
+  
+  pdf:
+    documentclass: article
+    papersize: A4
+    #abstract: "Working in progress"
+    top-level-division: section
+    #code-block-bg: gray
+    geometry:
+      - paperwidth=8.00in
+      - paperheight=10.00in
+      - left=1.25in
+      - textwidth= 5.25in
+      - top=1.00in
+      - textheight=8.25in
+      #- showframe
+    #include-in-header: preamble.tex
+    #include-before-body: first.tex
+    #include-after-body: backcover.tex
+    toc: false
+    colorlinks: true
+    fig-width: 5
+    fig-height: 5
+    fig-align: left
+    keep-tex: true
+
+editor: visual
+
