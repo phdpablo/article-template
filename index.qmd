@@ -8,4 +8,4 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
 **How cite this template:**
 
-Rogers, Pablo (2023). article-template v0.2. GitHub repository. DOI: 10.5281/zenodo.10443128.
+Pablo Rogers. (2023). phdpablo/article-template: Second version (v0.2). Zenodo. https://doi.org/10.5281/zenodo.10443190
