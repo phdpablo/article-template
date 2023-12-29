@@ -1,0 +1,7 @@
+# Background
+
+In summary, this article has no content whatsoever.
+
+```{r}
+1 + 1
+```

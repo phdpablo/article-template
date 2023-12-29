@@ -1,1 +1,1 @@
-Sitemap: https://phdpablo.github.io/smart-cfa/sitemap.xml
+Sitemap: https://phdpablo.github.io/article-template/sitemap.xml

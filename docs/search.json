@@ -2,23 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Smart Choices for Measurement Models",
+    "title": "Your title",
     "section": "",
-    "text": "Abstract\nThis is a Quarto article.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n\n\nCitation"
+    "text": "Abstract\nThis is a Quarto book template for scientific article.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\nKey-words:\nHow cite this template:\nRogers, Pablo (2023). article-template v0.2. GitHub repository. DOI: 10.5281/zenodo.10443128."
   },
   {
     "objectID": "01-intro.html",
     "href": "01-intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "This is a article template created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   },
   {
-    "objectID": "02-smart-choices.html",
-    "href": "02-smart-choices.html",
-    "title": "2  Smart Choices",
+    "objectID": "02-background.html",
+    "href": "02-background.html",
+    "title": "2  Background",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+    "text": "In summary, this article has no content whatsoever.\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "references.html",

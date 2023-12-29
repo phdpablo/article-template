@@ -8,12 +8,12 @@ execute:
   #- webr
   #- abstract-section:
 book:
-  title: "Smart Choices for Measurement Models"
-  subtitle: "Dynamic Tutorial for your Confirmatory Factor Analysis in R Environment"
-  author: "Pablo Rogers"
-  date: 12/27/2023
+  title: "Your title"
+  subtitle: "Your subtitle"
+  author: "Your name"
+  date: last-modified
   date-format: long
-  #doi:
+  doi: 10.5281/zenodo.10443128
   cover-image: img/cover.png
   downloads: pdf
   reader-mode: true
@@ -23,8 +23,8 @@ book:
   page-footer:
     left: <a href="https://www.phdpablo.com">by Pablo Rogers</a>
     right: This article was built with <a href="https://quarto.org/">Quarto</a> 
-  site-url: "https://phdpablo.github.io/smart-cfa/"
-  repo-url: "https://github.com/phdpablo/smart-cfa/"
+  site-url: "https://phdpablo.github.io/article-template/"
+  repo-url: "https://github.com/phdpablo/article-template/"
   #repo-actions: [edit,issue]
   sharing: [twitter, facebook, linkedin]
   open-graph: true
@@ -32,9 +32,9 @@ book:
   chapters:
     - index.qmd
     - 01-intro.qmd
-    - 02-smart-choices.qmd
-    - 03-model.qmd
-    - 04-tutorial.qmd
+    - 02-background.qmd
+    - 03-methods.qmd
+    - 04-results.qmd
     - 05-considerations.qmd
     - references.qmd
 

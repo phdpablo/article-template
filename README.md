@@ -1,11 +1,13 @@
-# Working in progress
+# Quarto book template for scientific article
 
-Article repository "Smart Choices for Measurement Models: Dynamic Tutorial for your Confirmatory Factor Analysis in R Environment".
+This repository is a template for you who want to develop an article in [Quarto book](https://quarto.org/docs/books/) structure.
 
-# License
+Clone this repository to your local PC and change the structure of the \_quarto.yml file as you wish. Maybe ligth and dark [themes](https://quarto.org/docs/output-formats/html-themes.html).
 
-<p xmlns:cc="http://creativecommons.org/ns#">
+See the template deployment at: <https://phdpablo.github.io/article-template/>
 
-This work is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial 4.0 International<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a>
+The R environment is already configured by the [renv package](https://rstudio.github.io/renv/articles/renv.html). So, make sure you have renv installed and run renv::restore() to recover the versions used in this project.
 
-</p>
+Consider changing your article cover (img/cover.png).
+
+Consider changing the [PDF format](https://quarto.org/docs/output-formats/pdf-basics.html) of your article.
