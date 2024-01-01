@@ -8,4 +8,5 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
 **How cite this template:**
 
-Pablo Rogers. (2023). phdpablo/article-template: Second version (v0.2). Zenodo. https://doi.org/10.5281/zenodo.10443190
+<a href="https://doi.org/10.5281/zenodo.10443127"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10443127.svg" alt="DOI"></a>
+
