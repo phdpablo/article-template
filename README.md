@@ -11,3 +11,7 @@ The R environment is already configured by the [renv package](https://rstudio.gi
 Consider changing your article cover (img/cover.png).
 
 Consider changing the [PDF format](https://quarto.org/docs/output-formats/pdf-basics.html) of your article.
+
+How cite this template:
+
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.10443127.svg)](https://doi.org/10.5281/zenodo.10443127)
