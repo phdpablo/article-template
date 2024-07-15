@@ -2,5 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-/.quarto/
-/_book/
+/project/.quarto/
+/project/_book/
+/adm/
