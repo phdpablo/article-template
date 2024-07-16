@@ -1,8 +1,17 @@
-# (UNDER CONSTRUCTION) Quarto-TIER project for scientific article
+# (UNDER DEVELOPMENT) Quarto-TIER project for scientific article
 
 [![](https://zenodo.org/badge/DOI/10.5281/zenodo.10443127.svg)](https://doi.org/10.5281/zenodo.10443127)
 
+See the template deployment at: <https://phdpablo.github.io/article-template/>
+
 This repository is a template for you who want to develop an project article in [Quarto book](https://quarto.org/docs/books/) and [TIER protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/) structure. The Quarto book is a tool for reproducible research and scientific writing. It is based on markdown and R language (Python, Julia and Observable), and integrated on RStudio. The TIER protocol 4.0 is a structure for organizing the project files and scripts.
+
+## What you need to know for using this template?
+
+- If you've read this far, you most likely have some knowledge of RStudio and Git/GitHub (you should have installed it, created an account, and know how to clone repositories).
+- Quarto is a relatively recent solution (2021) and you may not have some knowledge about it. If don't, you can check the [Quarto documentation](https://quarto.org/docs/). It is a tool that will possibly replace RMarkdown. If you are familiar with RMarkdown, you will have no problem with Quarto.
+- Regardless of your field of study or scientific methodology, I strongly advise you to read [TIER Protocol 4.0 documentation](https://www.projecttier.org/tier-protocol/protocol-4-0/) if you haven't already. After all, everything you need to organize and document your folder and file structure is there. It's an effortless and intuitive read that will save you hours of thought.
+- Docker???
 
 ## Why Quarto book project and not manuscript project?
 
@@ -40,16 +49,41 @@ The structure of the folders and files is as follows:
 
 - **all others files**: are the configuration files for the project, from the `.gitignore`, `renv` to the `.Rprofile` file.
 
-Clone this repository to your local PC and change the structure of the \_quarto.yml file as you wish. Maybe ligth and dark [themes](https://quarto.org/docs/output-formats/html-themes.html).
 
-See the template deployment at: <https://phdpablo.github.io/article-template/>
+Given that this template was created using Windows 11 Pro (23H2), R 4.4.0, RStudio 2024.04.2 (Build 764) and Quarto 1.5.45, the best way for replicate this repository locally, modify the narrative, and then publish the article as a dynamic document is:
 
-The R environment is already configured by the [renv package](https://rstudio.github.io/renv/articles/renv.html). So, make sure you have renv installed and run renv::restore() to recover the versions used in this project.
+1. **Use this template**:
 
-Consider changing your article cover (img/cover.png).
+-  Click on the green button `Use this template` at the right top of the repository and then `Create a new repository`. Name your repository. If you want to make it public you can publish your article while it is still in development. If private, use the repository for backup and commits and leave it public when publishing the research.
 
-Consider changing the [PDF format](https://quarto.org/docs/output-formats/pdf-basics.html) of your article.
+2. **Clone the repository to your local PC**:
 
-How cite this template:
+- Get the repository URL by clicking on the green button `Code` and copy the URL. You can use the terminal to clone the repository. Open the terminal in the folder where you want to clone the repository and type `git clone URL`. Replace `URL` with the repository URL.
 
-[![](https://zenodo.org/badge/DOI/10.5281/zenodo.10443127.svg)](https://doi.org/10.5281/zenodo.10443127)
+-  You can use the RStudio interface to clone the repository. Go to `File > New Project > Version Control > Git` and paste the repository URL.
+
+3. **Restore the Enviroment Control**:
+
+- The R environment is already configured by the [renv package](https://rstudio.github.io/renv/articles/renv.html). So, make sure you have `renv` installed and run `renv::restore()`to recover the versions used in this project.
+
+4. **Edit READMEs**:
+
+- Modify the READMEs files to correspond with the findings of your investigation. The description found in this repository's READMEs can serve as a guide, but you will undoubtedly need to modify it to fit the needs of your project, folder structure, files, etc. You might want to remove the README file from the `adm` folder. Just make sure to read everything first because you may find something useful for your situation. Of course you can do this during the research or at the end.
+
+5. **Edit the Quarto configuration**:
+
+- The Quarto configuration file is the `_quarto.yml` file. This file is located in the root of the `project` folder. You can change the structure of the `_quarto.yml`file with moderation. In this file there are some comments `(#)` that can guide you in the changes. For example, perhaps you want to change the [themes](https://quarto.org/docs/output-formats/html-themes.html) to one that is available.
+
+- Naturally, you can keep an eye on these modifications as the study progresses and determine which configurations are most suitable for you or require. For example: consider changing your article cover (adm/cover.png) or Consider changing the [PDF format](https://quarto.org/docs/output-formats/pdf-basics.html).
+
+6. **Edit the narrative**:
+
+- The narrative is divided into `.qmd` files, each representing a section of the article's narrative in the `project` folder. Insert your narrative inside these files on RStudio/Quarto. Use your creativity to compile what you consider important in the main text of the article and leave intermediate analysis to other scripts. From an operational point of view, your best friend will be the [Quarto documentation](https://quarto.org/docs/guide/). Of course, assuming you know what you are doing in R for your statistical analyses.
+
+- Commits are your friends. Use them to document the changes you make to the narrative. This will help you keep track of the changes you make and, if necessary, go back to a previous version. Don't forget to push and pull the changes to/from the remote repository.
+
+7. **Publish the article**:
+
+- When you are ready to publish the article, you can render the document in RStudio. The `docs` folder will be updated with the new version of the article. You can then push the changes to the remote repository and the article will be available on GitHub Pages. You can activate GitHub Pages in the repository settings, in the `Pages` tab, and select the `main` (or `master`) branch and the `docs` folder.
+
+- This stage should, in my opinion, be carried out continuously throughout the project. From the outset, make the repository public. Then, when you commit and make changes, test to ensure that the renderings, or compilations, are proceeding as expected. This way, you will have a more reliable and less stressful publication process.

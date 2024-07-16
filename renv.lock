@@ -243,6 +243,16 @@
       ],
       "Hash": "5e3c5dc0b071b21fa128676560dbe94d"
     },
+    "renv": {
+      "Package": "renv",
+      "Version": "1.0.7",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "397b7b2a265bc5a7a06852524dabae20"
+    },
     "rlang": {
       "Package": "rlang",
       "Version": "1.1.4",

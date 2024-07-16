@@ -1,8 +1,10 @@
 project:
-  type: book
-  output-dir: ../docs
+  type: book 
+  # if change this key, maybe you have a problem with the structure output
+  output-dir: ../docs 
+  # not change this key if you want to deploy in GitHub Pages
 execute: 
-  #echo: false
+  # echo: false
   warning: false
 #filters: 
   #- webr
@@ -14,7 +16,7 @@ book:
   date: last-modified
   date-format: long
   doi: 10.5281/zenodo.10443128
-  cover-image: img/cover.png
+  cover-image: adm/cover.png
   downloads: pdf
   reader-mode: true
   sidebar:
@@ -50,6 +52,7 @@ format:
     #css: style.css
     #code-link: true
     theme:
+    # See more theme options at: https://quarto.org/docs/output-formats/html-themes.html
       light: flatly
       dark: darkly
     number-sections: true
