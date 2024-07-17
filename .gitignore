@@ -3,6 +3,5 @@
 .RData
 .Ruserdata
 /project/.quarto/
-/project/_book/
-/adm/*
-/adm/README.md
+/project/site_libs/
+/adm/
