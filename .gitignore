@@ -4,3 +4,5 @@
 .Ruserdata
 /project/.quarto/
 /project/_book/
+/adm/*
+/adm/README.md

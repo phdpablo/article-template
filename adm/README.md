@@ -2,12 +2,14 @@ The creation of an `adm` (Administration) folder in your research project, which
 
 Additionally, the `adm` folder will house temporary and work-related documents, including notes, drafts, task lists, and meeting notes. These are frequently updated and not pertinent to the main code repository, ensuring that only the most relevant information is tracked and versioned.
 
-Files that are specific to the local work environment will also be stored in the `adm` folder. These might include local software configurations, API keys, and credentials. Such files are not necessary for other collaborators to replicate the project and are better kept out of the version control system to prevent accidental exposure.
+Additionally, files unique to the local work environment will be kept in the `adm` folder. These could consist of credentials, API keys, and local software configurations. These files should be kept out of the version control system to avoid unintentional exposure and are not required for other participants to duplicate the project.
 
-The `adm` folder serves as a backup repository for work in progress, allowing you to store interim versions and backups without cluttering the Git history with unnecessary commits. This practice keeps the main repository clean and focused on significant updates and changes.
+As a work-in-progress backup repository, the `adm` folder lets you keep temporary versions and backups without adding needless changes to the Git history. This procedure maintains the primary repository organized and concentrated on important updates and modifications.
 
-Moreover, the folder includes administrative materials related to project management, such as schedules, budgets, and resource planning documents. These are crucial for the internal administration of the project but do not need to be part of the version-controlled codebase.
+In addition, the folder contains project management-related administrative items such budgets, timelines, and resource planning documents. These don't have to be a part of the version-controlled codebase; they are essential for the project's internal management.
 
-Lastly, by ignoring the `adm` folder in Git, you maintain a clean and organized repository. This approach ensures that only files and code directly relevant to the development and replication of the research are tracked, thus preserving the integrity and clarity of the commit history.
+Finally, you keep a clean and orderly repository in Git by ignoring the `adm` folder. By taking this method, the integrity and clarity of the commit history are preserved since only files and code that are directly important to the development and replication of the research are tracked.
 
-In summary, the `adm` folder could be a vital part of the project setup, providing a secure and organized space for sensitive data, temporary documents, local-specific files, work in progress, and administrative materials, all while keeping the Git repository clean and focused on what truly matters for the research.
+For instance, the authors of this template typically write the articles in their native language, and the mess stays in that folder. This folder is also used for 'to do' notes to keep track of tasks, intermediary files for creating external illustrations to the scripts, and other project-related external files.
+
+In summary, the `adm` folder may play a crucial role in the project setup by offering a safe and well-organized location for work in progress, temporary documents, sensitive data, local-specific files, and administrative materials, all while maintaining the Git repository clean and concentrated on the elements that are actually important for the research.

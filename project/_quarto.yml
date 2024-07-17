@@ -1,56 +1,51 @@
-project:
+project: # https://quarto.org/docs/projects/quarto-projects.html
   type: book 
   # if change this key, maybe you have a problem with the structure output
   output-dir: ../docs 
   # not change this key if you want to deploy in GitHub Pages
-execute: 
-  # echo: false
+execute: # https://quarto.org/docs/computations/execution-options.html
   warning: false
-#filters: 
-  #- webr
-  #- abstract-section:
-book:
-  title: "Your title"
-  subtitle: "Your subtitle"
-  author: "Your name"
-  date: last-modified
+book: # https://quarto.org/docs/books/index.html
+  title: "Your title" # edit your title
+  subtitle: "Your subtitle" # edit your subtitle
+  author: "Your name" # edit your name
+  date: last-modified # https://quarto.org/docs/reference/dates.html
   date-format: long
-  doi: 10.5281/zenodo.10443128
-  cover-image: adm/cover.png
-  downloads: pdf
+  doi: 10.5281/zenodo.10443128 # put your DOI
+  cover-image: ../adm/cover.png # edit ou exclude this image
+  downloads: pdf # https://quarto.org/docs/books/book-output.html#reader-tools
   reader-mode: true
   sidebar:
     align: left
     collapse-level: 1
-  page-footer:
-    left: <a href="https://www.phdpablo.com">by Pablo Rogers</a>
+  page-footer: 
+  # edit or exclude this footer
+    left: <a href="https://www.phdpablo.com">by Pablo Rogers</a> 
     right: This article was built with <a href="https://quarto.org/">Quarto</a> 
-  site-url: "https://phdpablo.github.io/article-template/"
-  repo-url: "https://github.com/phdpablo/article-template/"
-  #repo-actions: [edit,issue]
-  sharing: [twitter, facebook, linkedin]
+  site-url: "https://phdpablo.github.io/article-template/" # edit your site URL
+  repo-url: "https://github.com/phdpablo/article-template/" # edit your repo URL
+  sharing: [twitter, facebook, linkedin] # edit or exclude this sharing
   open-graph: true
   
-  chapters:
+  chapters: # https://quarto.org/docs/books/book-structure.html
     - index.qmd
     - 01-intro.qmd
     - 02-background.qmd
     - 03-methods.qmd
     - 04-results.qmd
-    - 05-considerations.qmd
+    - 05-conclusion.qmd
     - references.qmd
 
-bibliography: references.bib
+bibliography: ../references.bib # https://quarto.org/docs/authoring/citations.html
+csl: ../apa7ed.csl
 
-format:
+format: # https://quarto.org/docs/reference/formats/html.html
   html:
     title-block-style: none
     toc: true
     collapse: true
     html-math-method: mathjax
-    #include-in-header: header-includes.html
-    #css: style.css
-    #code-link: true
+    code-link: true
     theme:
     # See more theme options at: https://quarto.org/docs/output-formats/html-themes.html
       light: flatly
@@ -61,23 +56,17 @@ format:
     fig-height: 5
     fig-align: left
   
-  pdf:
+  pdf: # https://quarto.org/docs/reference/formats/pdf.html
     documentclass: article
     papersize: A4
-    #abstract: "Working in progress"
     top-level-division: section
-    #code-block-bg: gray
     geometry:
-      - paperwidth=8.00in
-      - paperheight=10.00in
+      - paperwidth=8.27in
+      - paperheight=11.69in
       - left=1.25in
       - textwidth= 5.25in
       - top=1.00in
       - textheight=8.25in
-      #- showframe
-    #include-in-header: preamble.tex
-    #include-before-body: first.tex
-    #include-after-body: backcover.tex
     toc: false
     colorlinks: true
     fig-width: 5

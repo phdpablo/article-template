@@ -39,7 +39,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage[paperwidth=8.00in,paperheight=10.00in,left=1.25in,textwidth=
+\usepackage[paperwidth=8.27in,paperheight=11.69in,left=1.25in,textwidth=
 5.25in,top=1.00in,textheight=8.25in]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
@@ -67,46 +67,6 @@
 \fi
 \makeatother
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{241,243,245}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -236,7 +196,7 @@
 \makeatother
 \subtitle{Your subtitle}
 \author{Your name}
-\date{July 15, 2024}
+\date{July 17, 2024}
 
 \begin{document}
 \maketitle
@@ -247,12 +207,21 @@
 
 \markboth{Abstract}{Abstract}
 
-This is a Quarto book template for scientific article.
+This is a template to create a project article using the
+\href{https://quarto.org/docs/books/}{Quarto book} and
+\href{https://www.projecttier.org/tier-protocol/protocol-4-0/}{TIER
+protocol 4.0} structures. Quarto is a document authoring and publishing
+tool that allows you to create books, reports, and other documents that
+are rich in content and fully reproducible. It is integrated with
+RStudio and is built on markdown and works with R language, Python,
+Julia, and Observable. The TIER protocol 4.0 specifies the contents and
+organization of reproduction documentation for a project involving
+computations with statistical data analysis. The project is already
+configured for versioning with Git/GitHub, environment control with
+\texttt{renv}, and publication on GitHub Pages.
 
-To learn more about Quarto books visit
-\url{https://quarto.org/docs/books}.
-
-\textbf{Key-words:}
+\textbf{Key-words:} Open Science, Reproducibility, Quarto, TIER Protocol
+4.0, R language, RStudio, Git, GitHub, renv, GitHub Pages.
 
 \textbf{How cite this template:}
 
@@ -260,47 +229,60 @@ To learn more about Quarto books visit
 
 \section{Introduction}\label{introduction}
 
-This is a article template created from markdown and executable code.
-
-See Knuth (1984) for additional discussion of literate programming.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-[1] 2
-\end{verbatim}
+Gain some additional knowledge regarding Open Science and reproducible
+research (Kathawalla et al., 2021; Klein et al., 2018)
 
 \bookmarksetup{startatroot}
 
 \section{Background}\label{background}
 
-In summary, this article has no content whatsoever.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-[1] 2
-\end{verbatim}
+Make sure to look into the thought of reproducible research practice
+(Dogucu \& Çetinkaya-Rundel, 2022; Gilroy \& Kaplan, 2019; Sullivan et
+al., 2019; Vuorre \& Curley, 2018; Wiebels \& Moreau, 2021; Wilson et
+al., 2017).
 
 \bookmarksetup{startatroot}
 
 \section{Methods}\label{methods}
 
+If you need to learn a little more about Reproducible Research with
+R/RStudio there are excellent free e-books:
+
+\begin{itemize}
+\item
+  \href{https://r4ds.hadley.nz/}{R for Data Science}
+\item
+  \href{https://raps-with-r.dev/}{Building reproducible analytical
+  pipelines with R}
+\item
+  \href{https://arca-dpss.github.io/manual-open-science/}{The Open
+  Science Manual: Make Your Scientific Research Accessible and
+  Reproducible}
+\end{itemize}
+
 \bookmarksetup{startatroot}
 
 \section{Results}\label{results}
 
+Include tables, graphs, figures, and other visual aids from your scripts
+in the \texttt{AnalysisScripts} folder as you write up your narrative.
+To learn how to complete this integration, look to
+\href{https://quarto.org/docs/authoring/notebook-embed.html}{Quarto's
+documentation embedding}.
+
 \bookmarksetup{startatroot}
 
-\section{Final Considerations}\label{final-considerations}
+\section{Conclusion}\label{conclusion}
+
+Although your story must be auditable and replicable by your scripts,
+keep in mind that not everything in your scripts needs to be in your
+narrative. For example, you may want to include a summary of your
+results in your narrative, but you don't need to include all the code
+that generated those results. You can include the code in a separate
+script file that you reference in your table summary. In this approach,
+you can provide the context you need to audit your results within your
+repository, all the while keeping your narrative focused on the story
+you are trying to tell.
 
 \bookmarksetup{startatroot}
 
@@ -311,9 +293,54 @@ In summary, this article has no content whatsoever.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-knuth84}
-Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Comput. J.} 27
-(2): 97--111. \url{https://doi.org/10.1093/comjnl/27.2.97}.
+\bibitem[\citeproctext]{ref-dogucu2022}
+Dogucu, M., \& Çetinkaya-Rundel, M. (2022). Tools and Recommendations
+for Reproducible Teaching. \emph{Journal of Statistics and Data Science
+Education}, \emph{30}(3), 251--260.
+\url{https://doi.org/10.1080/26939169.2022.2138645}
+
+\bibitem[\citeproctext]{ref-gilroy2019}
+Gilroy, S. P., \& Kaplan, B. A. (2019). Furthering Open Science in
+Behavior Analysis: An Introduction and Tutorial for Using GitHub in
+Research. \emph{Perspectives on Behavior Science}, \emph{42}(3),
+565--581. \url{https://doi.org/10.1007/s40614-019-00202-5}
+
+\bibitem[\citeproctext]{ref-kathawalla2021}
+Kathawalla, U.-K., Silverstein, P., \& Syed, M. (2021). Easing Into Open
+Science: A Guide for Graduate Students and Their Advisors.
+\emph{Collabra: Psychology}, \emph{7}(1), 18684.
+\url{https://doi.org/10.1525/collabra.18684}
+
+\bibitem[\citeproctext]{ref-klein2018}
+Klein, O., Hardwicke, T. E., Aust, F., Breuer, J., Danielsson, H., Mohr,
+A. H., IJzerman, H., Nilsonne, G., Vanpaemel, W., \& Frank, M. C.
+(2018). A Practical Guide for Transparency in Psychological Science.
+\emph{Collabra: Psychology}, \emph{4}(1), 20.
+\url{https://doi.org/10.1525/collabra.158}
+
+\bibitem[\citeproctext]{ref-sullivan2019}
+Sullivan, I., DeHaven, A., \& Mellor, D. (2019). Open and Reproducible
+Research on Open Science Framework. \emph{Current Protocols Essential
+Laboratory Techniques}, \emph{18}(1), e32.
+\url{https://doi.org/10.1002/cpet.32}
+
+\bibitem[\citeproctext]{ref-vuorre2018}
+Vuorre, M., \& Curley, J. P. (2018). Curating Research Assets: A
+Tutorial on the Git Version Control System. \emph{Advances in Methods
+and Practices in Psychological Science}, \emph{1}(2), 219--236.
+\url{https://doi.org/10.1177/2515245918754826}
+
+\bibitem[\citeproctext]{ref-wiebels2021}
+Wiebels, K., \& Moreau, D. (2021). Leveraging Containers for
+Reproducible Psychological Research. \emph{Advances in Methods and
+Practices in Psychological Science}, \emph{4}(2), 251524592110178.
+\url{https://doi.org/10.1177/25152459211017853}
+
+\bibitem[\citeproctext]{ref-wilson2017}
+Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., \&
+Teal, T. K. (2017). Good enough practices in scientific computing.
+\emph{PLOS Computational Biology}, \emph{13}(6), e1005510.
+\url{https://doi.org/10.1371/journal.pcbi.1005510}
 
 \end{CSLReferences}
 

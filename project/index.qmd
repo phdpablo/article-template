@@ -1,10 +1,8 @@
 # Abstract {.unnumbered .unlisted}
 
-This is a Quarto book template for scientific article.
+This is a template to create a project article using the [Quarto book](https://quarto.org/docs/books/) and [TIER protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/) structures. Quarto is a document authoring and publishing tool that allows you to create books, reports, and other documents that are rich in content and fully reproducible. It is integrated with RStudio and is built on markdown and works with R language, Python, Julia, and Observable. The TIER protocol 4.0 specifies the contents and organization of reproduction documentation for a project involving computations with statistical data analysis. The project is already configured for versioning with Git/GitHub, environment control with `renv`, and publication on GitHub Pages.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-**Key-words:**
+**Key-words:** Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv, GitHub Pages.
 
 **How cite this template:**
 

@@ -1,3 +1,9 @@
----
-title: "Methods"
----
+# Methods
+
+If you need to learn a little more about Reproducible Research with R/RStudio there are excellent free e-books:
+
+-   [R for Data Science](https://r4ds.hadley.nz/)
+
+-   [Building reproducible analytical pipelines with R](https://raps-with-r.dev/)
+
+-   [The Open Science Manual: Make Your Scientific Research Accessible and Reproducible](https://arca-dpss.github.io/manual-open-science/)

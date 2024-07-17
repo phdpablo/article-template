@@ -1,0 +1,3 @@
+# Conclusion
+
+Although your story must be auditable and replicable by your scripts, keep in mind that not everything in your scripts needs to be in your narrative. For example, you may want to include a summary of your results in your narrative, but you don't need to include all the code that generated those results. You can include the code in a separate script file that you reference in your table summary. In this approach, you can provide the context you need to audit your results within your repository, all the while keeping your narrative focused on the story you are trying to tell.

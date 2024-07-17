@@ -1,3 +1,3 @@
----
-title: "Results"
----
+# Results
+
+Include tables, graphs, figures, and other visual aids from your scripts in the `AnalysisScripts` folder as you write up your narrative. To learn how to complete this integration, look to [Quarto's documentation embedding](https://quarto.org/docs/authoring/notebook-embed.html).

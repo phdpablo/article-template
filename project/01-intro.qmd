@@ -1,9 +1,3 @@
 # Introduction
 
-This is a article template created from markdown and executable code.
-
-See @knuth84 for additional discussion of literate programming.
-
-```{r}
-1 + 1
-```
+Gain some additional knowledge regarding Open Science and reproducible research [@klein2018; @kathawalla2021]

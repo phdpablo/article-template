@@ -1,64 +1,74 @@
-# (UNDER DEVELOPMENT) Quarto-TIER project for scientific article
+# Quarto article template for research project
 
 [![](https://zenodo.org/badge/DOI/10.5281/zenodo.10443127.svg)](https://doi.org/10.5281/zenodo.10443127)
 
 See the template deployment at: <https://phdpablo.github.io/article-template/>
 
-This repository is a template for you who want to develop an project article in [Quarto book](https://quarto.org/docs/books/) and [TIER protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/) structure. The Quarto book is a tool for reproducible research and scientific writing. It is based on markdown and R language (Python, Julia and Observable), and integrated on RStudio. The TIER protocol 4.0 is a structure for organizing the project files and scripts.
+If you wish to create a project article using the [Quarto book](https://quarto.org/docs/books/) and [TIER protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/) structures, this repository serves as a template. A useful resource for scientific writing and reproducible research is the Quarto book. It is integrated with RStudio and is built on markdown and the R language (Python, Julia, and Observable). The project files and scripts are arranged according to [TIER protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/). The project is already configured for versioning with Git/GitHub, environment control with `renv`, and publication on GitHub Pages.
 
 ## What you need to know for using this template?
 
-- If you've read this far, you most likely have some knowledge of RStudio and Git/GitHub (you should have installed it, created an account, and know how to clone repositories).
-- Quarto is a relatively recent solution (2021) and you may not have some knowledge about it. If don't, you can check the [Quarto documentation](https://quarto.org/docs/). It is a tool that will possibly replace RMarkdown. If you are familiar with RMarkdown, you will have no problem with Quarto.
-- Regardless of your field of study or scientific methodology, I strongly advise you to read [TIER Protocol 4.0 documentation](https://www.projecttier.org/tier-protocol/protocol-4-0/) if you haven't already. After all, everything you need to organize and document your folder and file structure is there. It's an effortless and intuitive read that will save you hours of thought.
-- Docker???
+- If you've read this far, you probably know a little something about Git/GitHub and RStudio (you should have installed it, made an account, and cloned repositories).
+
+- Since Quarto was introduced in 2021, it's possible that you're not familiar with it. You can review the [Quarto documentation](https://quarto.org/docs/) if you don't. This tool has the potential to take the role of RMarkdown. You won't encounter any difficulties with Quarto if you are familiar with RMarkdown.
+
+- I strongly recommend that you read the [TIER Protocol 4.0 documentation](https://www.projecttier.org/tier-protocol/protocol-4-0/) if you haven't already, regardless of your field of study or scientific technique. Ultimately, all the necessary components for arranging and recording your folder and file hierarchy are present. It's an effortless and intuitive read that will save you hours of thought.
 
 ## Why Quarto book project and not manuscript project?
 
-There is a Quarto specific framework for dealing with scientific articles, [Quarto manuscript](https://quarto.org/docs/manuscripts/), and another for books, [Quarto book](https://quarto.org/docs/books/). Both share the same background, and they similar in many aspects, but the Quarto book project is more flexible, allows us to create a more complex structure, greater variability of layouts, and can be adapted to the TIER protocol structure. The Quarto manuscript is still recent and lacks some functionality to make it more interesting.
+For handling scientific papers, there is a Quarto-specific framework called [Quarto manuscript](https://quarto.org/docs/manuscripts/), and for books, there is a Quarto book framework (https://quarto.org/docs/books/). Both have an analogous background and are comparable in many ways, but the Quarto book project is more adaptable, enables us to build a more sophisticated structure, has a wider range of layout options, and can be adapted to the TIER protocol framework. The Quarto manuscript is not quite recent, and it is not fully functional to enhance its interest level.
 
-In addition to the structure, the big difference between the two is that with Quarto manuscript the scripts **are integrated** into the outputs, while in Quarto book **they can be integrated** into the outputs. This is a big difference because it allows us to have a more organized project, with a clear separation between the scripts and the outputs.
+The primary distinction between the two, aside from their structure, is that the scripts in the Quarto manuscript **are integrated** into the outputs, whereas in the Quarto book **they can be integrated** into the outputs. This makes a significant impact since it enables us to build a project that is better organized and distinguishes clearly between the outputs and the scripts.
 
 ## How TIER protocol 4.0 can integrate with Quarto book?
 
-The TIER is a general protocol, aimed at both qualitative and quantitative research, both for those who do not intend to work with documents and for those who wish to make their research as reproducible as possible, with dynamic documents, such as Quarto. This template will make life easier for anyone who has decided to use an organization of folders and files based on TIER Protocol 4.0 and wants to carry out their research through Quarto, via RStudio.
+The TIER is an all-purpose protocol designed for both open-source and proprietary software, catering to users who want to work with dynamic documents like Quarto as well as those who do want to work with a copy-and-paste workflow. Anyone who has chosen to adopt a TIER Protocol 4.0-based folder and file organization system and want to conduct research using Quarto via RStudio will find this template to be very helpful. Although you are free to use any IDE, this repository's configuration is "more" automatically done due to its integration with `renv`.
 
-In this sense, the repository is already structured and adapted to handle the organization of TIER protocol 4.0 folders, and files necessary to insert the article narrative into Quarto documents. And not least, the repository is configured for you who will work with projects in RStudio with versioning (Git/GitHub), environment control (`renv`), and want to publish your article on GitHub Pages.
+In this way, the repository is pre-configured and ready to manage the TIER protocol 4.0 folder organization and files required to include the article narrative into Quarto documents. Last but not least, the repository is set up for you if you wish to publish your article on GitHub Pages and work with projects in RStudio that use environment control (`renv`) and versioning (Git/GitHub).
 
 ## What advantages does this template offer?
 
-1.  **Organization**: The project is structured according to the TIER protocol 4.0, which facilitates the organization of the research.
-2.  **Flexibility**: The Quarto book allows you to create a more complex structure, with greater variability of layouts.
-3.  **Integration**: The Quarto book allows you to integrate the scripts into the outputs, but it is not mandatory.
-4.  **Versioning**: The project is already configured for versioning with Git/GitHub.
+1.  **Organization**: The TIER protocol 4.0 is used in the project's framework to help with research organization.
+2.  **Flexibility**: You can design a complex structure with more layout options with the Quarto book.
+3.  **Integration**: Although it is not required, you can integrate the scripts into the outputs using the Quarto book.
+4.  **Versioning**: The project is set up with Git/GitHub versioning already.
 5.  **Environment control**: The project is already configured with `renv` for environment control.
-6.  **Publication**: The project is already configured for publication on GitHub Pages.
-7.  **Documentation**: The project is already documented with a README file in all subfolders, reinforcing the TIER protocol 4.0 guidelines, and facilitating communication and understanding of the project. The TIER Protocol is highly structured and detailed, and intended to serve as a highly flexible framework that can be adapted to a wide variety of contexts. The high degree of detail serves a pedagogical purpose.
+6.  **Publication**: The project has already been set up to be published on GitHub Pages.
+7.  **Documentation**: With a README file in each subfolder, the project is already well-documented, supporting TIER protocol 4.0 criteria and promoting communication and comprehension of the work. 
+
+The TIER Protocol is designed to serve as a highly adaptable framework that can be adapted to a wide range of situations. It is quite comprehensive and structured. The extensive level of detail has an educational purpose. Our contribution to the creation of the README was to use an AI to automatically synthesize the folder's structure and content in accordance with TIER Protocol 4.0.
+
+We inserted the following prompt in ChatGPT 4th (on 2024-07-16) to generate each of the README:
+
+*I'm developing READMEs to place in the folders of a model research project. I am following the structure proposed by TIER Protocol 4.0, according to its official website: https://www.projecttier.org/tier-protocol/protocol-4-0/; and the attached figure in this chat. I would like your help in proposing these READMEs. Next, I will tell you the folder in which I want to create the README, one by one, and the link to the summary website proposed by TIER protocol 4.0 and I need you to explain what is in that folder.*
+
+**The proponents of this template have, of course, carefully examined the AI outputs.**
 
 ## How to use this template?
 
 The structure of the folders and files is as follows:
 
--   **project/:** main folder of the project where the narrative, data, scripts and output of analysis files are located. See README inside subfolders.
+-   **project/:** The project's primary folder, which houses the article narrative, data, scripts, and analysis files' output. Look for README in the subfolders.
 
--   **docs/**: folder for publishing an HTML website. The `docs` folder is commonly used to store the static files of a website, such as HTML, CSS, and JavaScript files. When you want to publish a website in GitHub Pages, you would place all your website’s files into this `docs` folder. It’s default directory that GitHub Pages uses to host websites from a repository, which will be updated when you render your document (Quarto book) in RStudio.
+-   **docs/**: Folder used when releasing an HTML webpage. The static files of a website, like HTML, CSS, and JavaScript files, are often kept under the `docs` folder. All of your website's files go into this `docs` folder when you want to publish a website on GitHub Pages. When you render your document (Quarto book) in RStudio, the default directory used by GitHub Pages to host webpages from a repository is updated.
 
--   **renv/**: `renv` folder that the `renv` package in R creates when you enable environment control. When you initialize `renv` in your project, it creates a new `renv` folder. This folder is crucial for encapsulating the state of your project. By using the `renv` folder, you can ensure that your project is self-contained and reproducible. Anyone else who works on your project will be able to recreate the exact same R environment you used, simply by restoring the project using the `renv.lock` file.
+-   **renv/**: It is created when you enable environment control in R using the `renv` package. Upon initializing `renv` in your project, a new `renv` folder is generated. This folder is essential for summarizing your project's current state. You can make sure that your project is reproducible and self-contained by using the `renv` folder. By simply restoring the project using the `renv.lock` file and running the command `renv::restore()`, anyone working on your project will be able to replicate the exact same R environment that you used.
 
-- **adm/**: folder for administrative files, such contain sensitive and confidential data, temporary and work-related documents, backup repository for work in progress, administrative materials related to project management, etc. This folder is not versioned and is not published on GitHub Pages. There is an `.gitignore` file in the root of the project that prevents the `adm` folder from being versioned.
+- **adm/**: folder for administrative files, including project management-related administrative materials, temporary and work-related papers, backup repositories for ongoing projects, and sensitive and confidential data. This folder is not published on GitHub Pages and is not versioned. The project root contains a `.gitignore` file that prevents versioning of the `adm` folder. In [OSF](https://osf.io/), for example, you could want to share the project folder in its entirety, thus this folder is indicated in the repository root instead of the project folder.
 
 - **all others files**: are the configuration files for the project, from the `.gitignore`, `renv` to the `.Rprofile` file.
 
+### How to replicate this repository locally?
 
-Given that this template was created using Windows 11 Pro (23H2), R 4.4.0, RStudio 2024.04.2 (Build 764) and Quarto 1.5.45, the best way for replicate this repository locally, modify the narrative, and then publish the article as a dynamic document is:
+Since Windows 11 Pro (23H2), R 4.4.0, RStudio 2024.04.2 (Build 764) and Quarto 1.5.45 were used to develop this template, the best method to duplicate this repository locally, edit the narrative, and then publish the article as a dynamic document is:
 
 1. **Use this template**:
 
--  Click on the green button `Use this template` at the right top of the repository and then `Create a new repository`. Name your repository. If you want to make it public you can publish your article while it is still in development. If private, use the repository for backup and commits and leave it public when publishing the research.
+-  Click on the green button `Use this template` at the right top of this repository and then `Create a new repository`. Name your repository. If you want to make it public you can publish your article while it is still in development. If private, use the repository for backup and commits and leave it public when publishing the research.
 
 2. **Clone the repository to your local PC**:
 
-- Get the repository URL by clicking on the green button `Code` and copy the URL. You can use the terminal to clone the repository. Open the terminal in the folder where you want to clone the repository and type `git clone URL`. Replace `URL` with the repository URL.
+- In your GitHub account, get the repository URL by clicking on the green button `Code` and copy the URL. You can use the terminal to clone the repository. Open the terminal in the folder where you want to clone the repository and type `git clone URL`. Replace `URL` with the repository URL.
 
 -  You can use the RStudio interface to clone the repository. Go to `File > New Project > Version Control > Git` and paste the repository URL.
 
@@ -66,24 +76,24 @@ Given that this template was created using Windows 11 Pro (23H2), R 4.4.0, RStud
 
 - The R environment is already configured by the [renv package](https://rstudio.github.io/renv/articles/renv.html). So, make sure you have `renv` installed and run `renv::restore()`to recover the versions used in this project.
 
-4. **Edit READMEs**:
+4. **Edit README**:
 
-- Modify the READMEs files to correspond with the findings of your investigation. The description found in this repository's READMEs can serve as a guide, but you will undoubtedly need to modify it to fit the needs of your project, folder structure, files, etc. You might want to remove the README file from the `adm` folder. Just make sure to read everything first because you may find something useful for your situation. Of course you can do this during the research or at the end.
+- Adjust the README files to reflect the conclusions of your research. You can use the description in the READMEs of this repository as a reference, but you will definitely need to adapt it to your project's requirements, folder structure, files, etc. It could be a good idea to delete the `adm` folder's README file. Just make sure to read through everything first—you might find something that applies to your circumstance. Of course, you can complete this at the conclusion or during the research.
 
 5. **Edit the Quarto configuration**:
 
-- The Quarto configuration file is the `_quarto.yml` file. This file is located in the root of the `project` folder. You can change the structure of the `_quarto.yml`file with moderation. In this file there are some comments `(#)` that can guide you in the changes. For example, perhaps you want to change the [themes](https://quarto.org/docs/output-formats/html-themes.html) to one that is available.
+- The `_quarto.yml` file is the Quarto configuration file. The `project` folder's root contains this file. With moderation, you can modify the `_quarto.yml` file's structure. There are some comments (`#`) in this file that will help you with the adjustments. For instance, you could like to switch to one of the available [themes](https://quarto.org/docs/output-formats/html-themes.html).
 
-- Naturally, you can keep an eye on these modifications as the study progresses and determine which configurations are most suitable for you or require. For example: consider changing your article cover (adm/cover.png) or Consider changing the [PDF format](https://quarto.org/docs/output-formats/pdf-basics.html).
+- Of course, as the research goes on, you could track these changes and decide which options work best for you or are necessary. For instance, think about altering the [PDF format](https://quarto.org/docs/output-formats/pdf-basics.html) or your article cover (adm/cover.png).
 
 6. **Edit the narrative**:
 
 - The narrative is divided into `.qmd` files, each representing a section of the article's narrative in the `project` folder. Insert your narrative inside these files on RStudio/Quarto. Use your creativity to compile what you consider important in the main text of the article and leave intermediate analysis to other scripts. From an operational point of view, your best friend will be the [Quarto documentation](https://quarto.org/docs/guide/). Of course, assuming you know what you are doing in R for your statistical analyses.
 
-- Commits are your friends. Use them to document the changes you make to the narrative. This will help you keep track of the changes you make and, if necessary, go back to a previous version. Don't forget to push and pull the changes to/from the remote repository.
+- Commits are your allies. Make use of them to record any modifications you make to the narrative. This will assist you in monitoring the modifications you make and restoring to an earlier version if needed. Pushing and pulling updates to and from the remote repository is important to remember.
 
-7. **Publish the article**:
+7. **Publish the article and project**:
 
-- When you are ready to publish the article, you can render the document in RStudio. The `docs` folder will be updated with the new version of the article. You can then push the changes to the remote repository and the article will be available on GitHub Pages. You can activate GitHub Pages in the repository settings, in the `Pages` tab, and select the `main` (or `master`) branch and the `docs` folder.
+- You can render the document in RStudio when you're ready to publish the article. The modified version of the article will be placed in the `docs` folder. After that, you may push the modifications to the remote repository, and GitHub Pages will host the article. By selecting the `main` (or `master`) branch and the `docs` folder in the repository settings' `Pages` tab, you may activate GitHub Pages.
 
-- This stage should, in my opinion, be carried out continuously throughout the project. From the outset, make the repository public. Then, when you commit and make changes, test to ensure that the renderings, or compilations, are proceeding as expected. This way, you will have a more reliable and less stressful publication process.
+- If at all feasible, this phase ought to be completed continually during the project. Make the repository public right away. After making changes and committing them, test to make sure the renderings are happening as planned. In this manner, the publication procedure will be less stressful. If you want to utilize a storage service (like Dropbox, OneDrive, Google Drive, etc.), you may want to link your project folder to [OSF](https://help.osf.io/article/395-storage-add-ons)] from the very beginning of your research.
