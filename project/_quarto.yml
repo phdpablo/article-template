@@ -9,10 +9,10 @@ book: # https://quarto.org/docs/books/index.html
   title: "Your title" # edit your title
   subtitle: "Your subtitle" # edit your subtitle
   author: "Your name" # edit your name
-  date: last-modified # https://quarto.org/docs/reference/dates.html
+  date: 07/16/2024 # https://quarto.org/docs/reference/dates.html
   date-format: long
   doi: 10.5281/zenodo.10443128 # put your DOI
-  cover-image: ../adm/cover.png # edit ou exclude this image
+  cover-image: cover.png # edit ou exclude this image
   downloads: pdf # https://quarto.org/docs/books/book-output.html#reader-tools
   reader-mode: true
   sidebar:
