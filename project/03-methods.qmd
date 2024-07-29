@@ -1,5 +1,7 @@
 # Methods
 
+The text below is intended to be an instructive example...
+
 If you need to learn a little more about Reproducible Research with R/RStudio there are excellent free e-books:
 
 -   [R for Data Science](https://r4ds.hadley.nz/)

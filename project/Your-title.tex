@@ -44,28 +44,14 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
-\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}{
-    \@ifstar
-      \xxxParagraphStar
-      \xxxParagraphNoStar
-  }
-  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
-  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}{
-    \@ifstar
-      \xxxSubParagraphStar
-      \xxxSubParagraphNoStar
-  }
-  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
-  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
-\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -218,7 +204,7 @@ Julia, and Observable. The TIER protocol 4.0 specifies the contents and
 organization of reproduction documentation for a project involving
 computations with statistical data analysis. The project is already
 configured for versioning with Git/GitHub, environment control with
-\texttt{renv}, and publication on GitHub Pages.
+\texttt{renv} and/or Docker, and publication on GitHub Pages.
 
 \textbf{Key-words:} Open Science, Reproducibility, Quarto, TIER Protocol
 4.0, R language, RStudio, Git, GitHub, renv, GitHub Pages.
@@ -229,12 +215,39 @@ configured for versioning with Git/GitHub, environment control with
 
 \section{Introduction}\label{introduction}
 
+The text below is intended to be an instructive example\ldots{}
+
 Gain some additional knowledge regarding Open Science and reproducible
 research (Kathawalla et al., 2021; Klein et al., 2018)
+
+This is an example of how to integrate an external document into your
+article (Figure~\ref{fig-tier-folders}).
+
+\begin{figure}
+
+\href{https://zenodo.org/records/13119617}{\includegraphics{Output/tier-folders.png}}
+
+\caption{\label{fig-tier-folders}TIER Protocol 4.0: Quarto Reproducible
+Dynamic Template. Illustration available at:
+\textless https://doi.org/10.5281/zenodo.13119617\textgreater{}}
+
+\end{figure}%
+
+For more details about \textbf{TIER Protocol 4.0} visit the page:
+\url{https://www.projecttier.org/} and/or read the Domingos \& Batista
+(2021) article.
+
+Read the README files for the
+\href{https://github.com/phdpablo/article-template/tree/master/project}{project
+root} and \href{https://github.com/phdpablo/article-template}{this
+repository} to learn more about how this protocol works with this
+template.
 
 \bookmarksetup{startatroot}
 
 \section{Background}\label{background}
+
+The text below is intended to be an instructive example\ldots{}
 
 Make sure to look into the thought of reproducible research practice
 (Dogucu \& Çetinkaya-Rundel, 2022; Gilroy \& Kaplan, 2019; Sullivan et
@@ -244,6 +257,8 @@ al., 2017).
 \bookmarksetup{startatroot}
 
 \section{Methods}\label{methods}
+
+The text below is intended to be an instructive example\ldots{}
 
 If you need to learn a little more about Reproducible Research with
 R/RStudio there are excellent free e-books:
@@ -264,6 +279,8 @@ R/RStudio there are excellent free e-books:
 
 \section{Results}\label{results}
 
+The text below is intended to be an instructive example\ldots{}
+
 Include tables, graphs, figures, and other visual aids from your scripts
 in the \texttt{AnalysisScripts} folder as you write up your narrative.
 To learn how to complete this integration, look to
@@ -273,6 +290,8 @@ documentation embedding}.
 \bookmarksetup{startatroot}
 
 \section{Conclusion}\label{conclusion}
+
+The text below is intended to be an instructive example\ldots{}
 
 Although your story must be auditable and replicable by your scripts,
 keep in mind that not everything in your scripts needs to be in your
@@ -298,6 +317,12 @@ Dogucu, M., \& Çetinkaya-Rundel, M. (2022). Tools and Recommendations
 for Reproducible Teaching. \emph{Journal of Statistics and Data Science
 Education}, \emph{30}(3), 251--260.
 \url{https://doi.org/10.1080/26939169.2022.2138645}
+
+\bibitem[\citeproctext]{ref-domingos2021}
+Domingos, A., \& Batista, I. R. (2021). A map for transparency and
+replicability in empirical social science: the TIER Protocol.
+\emph{Revista Política Hoje}, 40--86.
+\url{https://doi.org/10.51359/1808-8708.2021.245776}
 
 \bibitem[\citeproctext]{ref-gilroy2019}
 Gilroy, S. P., \& Kaplan, B. A. (2019). Furthering Open Science in
