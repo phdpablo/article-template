@@ -1,6 +1,10 @@
-# IN CONSTRUCTION: Quarto article template for research project
+# Quarto dynamic article template for research project
 
-OSF CITATION
+## How cite this work?
+
+Rogers, P. (2024). TIER Protocol 4:0: Dynamic Template. <https://doi.org/10.17605/OSF.IO/NJDQ5>
+
+## Summary
 
 See the template deployment at: <https://phdpablo.github.io/article-template/>; and get more information.
 

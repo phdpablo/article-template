@@ -4,5 +4,6 @@ This is a template to create a project article using the [Quarto book](https://q
 
 **Key-words:** Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv, GitHub Pages.
 
-**How cite this template:**
+**How cite this template?**
 
+Rogers, P. (2024). TIER Protocol 4:0: Dynamic Template. <https://doi.org/10.17605/OSF.IO/NJDQ5>
