@@ -130,6 +130,6 @@ Since Ubuntu Jammy (22.04 LTS), R 4.4.1, RStudio 2024.04.2 (Build 764) and Quart
 
 -   Thus, pull this image from [DockerHub](https://hub.docker.com/), copy the folder, or create a persistent volume from your repository, and build a production container. Using this container at the start of the research project allows you to use it during development, run the `renv::snapshot()` command at the end, and create an image to share the reproducible analysis of your work.
 
-The figure below is intended to illustrate the steps discussed above.
+The figure below, available at: <https://doi.org/10.5281/zenodo.13119679>, is intended to illustrate the steps discussed above.
 
-![**Roadmap for Developing a Dynamic and Reproducible Research Article.** Illustration available at: <https://doi.org/10.5281/zenodo.13119679>](project/Output/roadmap-template.png)
+![Roadmap for Developing a Dynamic and Reproducible Research](project/Output/roadmap-template.jpg)
