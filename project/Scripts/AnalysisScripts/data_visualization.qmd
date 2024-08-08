@@ -1,0 +1,49 @@
+---
+title: "Data Visualization"
+author: Pablo Rogers
+date: 2024-08-08
+abstract: This document provides an overview of data visualization techniques and tools applied in the 'Article Template' results example.
+---
+  
+The text below is intended to be an instructive example…
+
+It should be noted that you have the option to create a raw R script (`*.R`) and use `#` to indicate comments in order to record the goals and procedures of the analysis. On the other hand, we think that a single Quarto document accomplishes the same goal while also improving the organization and didactics of the analysis documentation.
+
+However, the best approach is to use dynamic documents like Quarto `.qmd` if you wish to adhere to the suggestion of keeping scripts and analyses separate and integrating just the outputs that are crucial to your story into the article's content.
+
+As an illustration, you can write your script according to best practices, adding whatever is required to advance the narrative, but highlighting the text that will be included in the article in a different code chunk, as seen in the example below.
+
+## A code chunk used to construct example figure in the Results section
+```{r}
+#| label: fig-pressure
+#| fig-cap: "Pressure"
+#| code-fold: true
+
+library(ggplot2)
+dat <- data.frame(cond = rep(c("A", "B"), each=10),
+                  xvar = 1:20 + rnorm(20,sd=3),
+                  yvar = 1:20 + rnorm(20,sd=3))
+
+ggplot(dat, aes(x=xvar, y=yvar)) +
+    geom_point(shape=1) + 
+    geom_smooth() 
+```
+
+Keep in mind that the code chunk in this example needs to have all of the components necessary for it to exist, which in this case includes reading the `ggplot2` library. When producing more sophisticated outputs, the researcher may decide to just include the final result (the figure) in the article and provide information on how it was made in the accompanying script.
+
+
+## A code chunk used to construct example table in the Results section
+
+Here is another example of how we can embed a table into the text narrative with the `knitr::kable()` function to print tables as HTML:
+
+```{r}
+#| label: tbl-diamonds
+#| tbl-cap: "Diamonds characteristics"
+#| code-fold: true
+
+knitr::kable(head(ggplot2::diamonds))
+```
+
+The outputs produced when rendering the document can be stored in both the Output/Results and root docs/folders. 
+
+The researcher can then decide which outputs to include in the article and which to leave out. This is a great way to keep the article concise and focused on the most important results.

@@ -209,7 +209,10 @@ configured for versioning with Git/GitHub, environment control with
 \textbf{Key-words:} Open Science, Reproducibility, Quarto, TIER Protocol
 4.0, R language, RStudio, Git, GitHub, renv, GitHub Pages.
 
-\textbf{How cite this template:}
+\textbf{How cite this template?}
+
+Rogers, P. (2024). TIER Protocol 4:0: Dynamic Template.
+\url{https://doi.org/10.17605/OSF.IO/NJDQ5}
 
 \bookmarksetup{startatroot}
 
@@ -225,11 +228,11 @@ article (Figure~\ref{fig-tier-folders}).
 
 \begin{figure}
 
-\href{https://zenodo.org/records/13119617}{\includegraphics{Output/tier-folders.png}}
+\href{https://doi.org/10.5281/zenodo.13119617}{\includegraphics{Output/tier-folders.jpg}}
 
 \caption{\label{fig-tier-folders}TIER Protocol 4.0: Quarto Reproducible
 Dynamic Template. Illustration available at:
-\textless https://doi.org/10.5281/zenodo.13119617\textgreater{}}
+https://doi.org/10.5281/zenodo.13119617}
 
 \end{figure}%
 
@@ -286,6 +289,75 @@ in the \texttt{AnalysisScripts} folder as you write up your narrative.
 To learn how to complete this integration, look to
 \href{https://quarto.org/docs/authoring/notebook-embed.html}{Quarto's
 documentation embedding}.
+
+I've included two examples of how to include results from your analytic
+scripts into your story below: Figure~\ref{fig-pressure} and
+Table~\ref{tbl-diamonds}.
+
+\begin{figure}
+
+\includegraphics{04-results_files/figure-latex/-Scripts-AnalysisScripts-data_visualization-fig-pressure-output-1.png}
+
+\caption{\label{fig-pressure}Pressure}
+
+\end{figure}%
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1412}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1176}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0824}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0824}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0824}}@{}}
+
+\caption{\label{tbl-diamonds}Diamonds characteristics}
+
+\tabularnewline
+
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+carat
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+cut
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+color
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+clarity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+depth
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+table
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+price
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+x
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+y
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+z
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0.23 & Ideal & E & SI2 & 61.5 & 55 & 326 & 3.95 & 3.98 & 2.43 \\
+0.21 & Premium & E & SI1 & 59.8 & 61 & 326 & 3.89 & 3.84 & 2.31 \\
+0.23 & Good & E & VS1 & 56.9 & 65 & 327 & 4.05 & 4.07 & 2.31 \\
+0.29 & Premium & I & VS2 & 62.4 & 58 & 334 & 4.20 & 4.23 & 2.63 \\
+0.31 & Good & J & SI2 & 63.3 & 58 & 335 & 4.34 & 4.35 & 2.75 \\
+0.24 & Very Good & J & VVS2 & 62.8 & 57 & 336 & 3.94 & 3.96 & 2.48 \\
+
+\end{longtable}
+
+To learn how it was done, follow the code! Please take note that I was
+only referring to the output that was suggested in the
+\texttt{data\_visualization.qmd} script located in the
+\texttt{Scripts/AnalysisScripts} folder. You can refer to the script for
+more information.
 
 \bookmarksetup{startatroot}
 
