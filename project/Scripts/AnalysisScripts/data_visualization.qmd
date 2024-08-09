@@ -15,18 +15,17 @@ As an illustration, you can write your script according to best practices, addin
 
 ## A code chunk used to construct example figure in the Results section
 ```{r}
-#| label: fig-pressure
-#| fig-cap: "Pressure"
+#| label: fig-car
+#| fig-cap: "Weight vs. Fuel Consumption"
 #| code-fold: true
 
-library(ggplot2)
-dat <- data.frame(cond = rep(c("A", "B"), each=10),
-                  xvar = 1:20 + rnorm(20,sd=3),
-                  yvar = 1:20 + rnorm(20,sd=3))
-
-ggplot(dat, aes(x=xvar, y=yvar)) +
-    geom_point(shape=1) + 
-    geom_smooth() 
+# Generate a scatter plot
+plot(mtcars$wt, mtcars$mpg,
+     main = "Relationship between Weight and Fuel Consumption",
+     xlab = "Car Weight (1000 lbs)",
+     ylab = "Consumption (Miles per Gallon)",
+     pch = 19, # Point shape (filled circle)
+     col = "blue") # Color of the dots
 ```
 
 Keep in mind that the code chunk in this example needs to have all of the components necessary for it to exist, which in this case includes reading the `ggplot2` library. When producing more sophisticated outputs, the researcher may decide to just include the final result (the figure) in the article and provide information on how it was made in the accompanying script.
@@ -37,11 +36,18 @@ Keep in mind that the code chunk in this example needs to have all of the compon
 Here is another example of how we can embed a table into the text narrative with the `knitr::kable()` function to print tables as HTML:
 
 ```{r}
-#| label: tbl-diamonds
-#| tbl-cap: "Diamonds characteristics"
-#| code-fold: true
+#| echo: false
+#| output: false
 
-knitr::kable(head(ggplot2::diamonds))
+# Salvar o gráfico como um arquivo PNG
+png(filename = "../../Output/Results/scatter_plot.png")
+plot(mtcars$wt, mtcars$mpg,
+     main = "Relação entre Peso e Consumo de Combustível",
+     xlab = "Peso do Carro (1000 lbs)",
+     ylab = "Consumo (Milhas por Galão)",
+     pch = 19,
+     col = "blue")
+dev.off() # Finalizar a gravação no arquivo
 ```
 
 The outputs produced when rendering the document can be stored in both the Output/Results and root docs/folders. 
