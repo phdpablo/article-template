@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Your title",
+    "title": "TIER Dynamic Template",
     "section": "",
     "text": "Abstract\nThis is a template to create a project article using the Quarto book and TIER protocol 4.0 structures. Quarto is a document authoring and publishing tool that allows you to create books, reports, and other documents that are rich in content and fully reproducible. It is integrated with RStudio and is built on markdown and works with R language, Python, Julia, and Observable. The TIER protocol 4.0 specifies the contents and organization of reproduction documentation for a project involving computations with statistical data analysis. The project is already configured for versioning with Git/GitHub, environment control with renv and/or Docker, and publication on GitHub Pages.\nKey-words: Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv, GitHub Pages.\nHow cite this template?\nRogers, P. (2024). TIER Protocol 4:0: Dynamic Template. https://doi.org/10.17605/OSF.IO/NJDQ5",
     "crumbs": [
