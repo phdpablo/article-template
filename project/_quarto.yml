@@ -6,12 +6,12 @@ project: # https://quarto.org/docs/projects/quarto-projects.html
 execute: # https://quarto.org/docs/computations/execution-options.html
   warning: false
 book: # https://quarto.org/docs/books/index.html
-  title: "Your title" # edit your title
-  subtitle: "Your subtitle" # edit your subtitle
-  author: "Your name" # edit your name
-  date: 07/16/2024 # https://quarto.org/docs/reference/dates.html
+  title: "TIER Dynamic Template" # edit your title
+  subtitle: "Roadmap for Developing a Dynamic and Reproducible Research Article" # edit your subtitle
+  author: "Pablo Rogers" # edit your name
+  date: 08/08/2024 # https://quarto.org/docs/reference/dates.html
   date-format: long
-  doi: 10.5281/zenodo.10443128 # put your DOI
+  doi: 10.17605/OSF.IO/NJDQ5 # put your DOI
   cover-image: cover.png # edit ou exclude this image
   downloads: pdf # https://quarto.org/docs/books/book-output.html#reader-tools
   reader-mode: true
