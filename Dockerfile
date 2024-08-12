@@ -1,6 +1,6 @@
 #----	Dockerfile	----#
 
-# I will assume that your intention is to use this template and not to check its reproducibility.
+# I will assume that your intention is to use this template in the container.
 # To audit your reproducibility see: https://phdpablo.github.io/article-template/.
 # In this instance, I'll presume that you'll be working on your project inside 
 # of a container and utilizing RStudio Server as your IDE. 
@@ -21,11 +21,12 @@
 # or you can use the Docker GUI
 
 # 4. Create a container from the official rocker/verse:4.4.1 image
-# 4.1. The image will be downloaded from DockerHub if it is not already on your computer
-# 4.2. You are mapping your project folder into the container
-# 4.3. You are disabling authentication to access RStudio Server
-# 4.4. You are exposing the port 8787 to access RStudio Server
-# 4.5. You are naming the container article-template
+# 4.1. Execute the following command in the terminal
+# 4.2. The image will be downloaded from DockerHub if it is not already on your computer
+# 4.3. You are mapping your project folder into the container
+# 4.4. You are disabling authentication to access RStudio Server
+# 4.5. You are exposing the port 8787 to access RStudio Server
+# 4.6. You are naming the container article-template (give the name you want)
 
 docker run --name article-template -p 8787:8787 -e DISABLE_AUTH=true \ 
     -v .:/home/rstudio/article-template rocker/verse:4.4.1
@@ -57,3 +58,53 @@ docker run --name article-template -p 8787:8787 -e DISABLE_AUTH=true \
 # Check out one method for setting up Git/GitHub inside the container 
 # for version control and publishing in GitHub Pages afterwards:
 # https://arca-dpss.github.io/manual-open-science/rocker-chapter.html
+
+# There are other ways to build this container or an image based on this template, 
+# including in a more automatic way. For example, we could install the repository 
+# directly from Github in the container and run 'renv' before starting the container. 
+# However, we think this way is simpler and more flexible:
+
+# 1. Customizable Environment: By manually setting up the Docker container using 
+# the provided commands, users can easily adjust the configuration to fit their 
+# specific project needs. For instance, they can change the R version by modifying 
+# the `rocker/verse:4.4.1` image to another version, ensuring compatibility with 
+# different dependencies or project requirements.
+
+# 2. Incremental Development: This method allows users to incrementally build 
+# their environment. They can start with a minimal setup and gradually add the 
+# necessary tools and dependencies. This approach is particularly useful in 
+# situations where the full scope of the project isn't known from the start, 
+# allowing for a more agile development process.
+
+# 3. Easy Reset and Reproduction: If the project becomes unstable due to package 
+# conflicts or other issues, users can simply destroy the container and start 
+# fresh with the same command. This ensures that the environment can always be 
+# reset to a known, working state, which is harder to achieve with more automated 
+# or complex Docker setups.
+
+# 4. Selective Dependency Management: By deferring the execution of `renv::restore()`, 
+# users have the option to skip unnecessary package installations if they don't need 
+# them for their specific use case. This selective dependency management can save 
+# time and resources, especially when working with large projects or limited 
+# computational power.
+
+# 5. Portability and Sharing: The setup instructions make it easy for others to 
+# reproduce the exact environment on their own machines. This is crucial in 
+# collaborative projects where team members may be working on different platforms. 
+# The explicit and clear setup process ensures that everyone is on the same page, 
+# reducing the risk of environment-related issues.
+
+# 6. Modularity for Future Projects: The approach encourages modularity, allowing 
+# users to create new project templates based on this initial setup. After making 
+# adjustments to the container, such as installing additional packages or 
+# configuring settings, users can export the folder and use it as a base for 
+# future projects, streamlining the setup process for similar work.
+
+# 7. Reduced Complexity for Beginners: For users who are new to Docker or R, 
+# the step-by-step instructions provided in this Dockerfile are easier to follow 
+# compared to more complex Docker configurations that require advanced knowledge. 
+# This lowers the barrier to entry, enabling more people to utilize containerized 
+# environments effectively.
+
+# This approach is tailored to maximize flexibility while maintaining a balance 
+# between simplicity and control over the development environment.

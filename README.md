@@ -4,6 +4,16 @@
 
 Rogers, P. (2024). TIER Protocol 4:0: Dynamic Template. <https://doi.org/10.17605/OSF.IO/NJDQ5>
 
+## See other works that used this template
+
+Georgeto, S. M., & Rogers, P. (2024). Applying ANOVA in Crossover Trials. <https://doi.org/10.17605/OSF.IO/3RXF2>
+
+Rogers, P., & Georgeto, S. M. (2024). Utilizing GEE in Crossover Studies. [https://doi.org/10.17605/OSF.IO/MU67G](#0)
+
+Rogers, P. (2024). Smart Choices for Measurement Models: Executable Manuscript Tutorial for your Confirmatory Factor Analysis in R Environment. <https://doi.org/10.31234/osf.io/2dy3z>
+
+Rogers, P. (2024). PLS-SEM Interactive Tutorial: Step-by-Step with cSEM package. <https://phdpablo.github.io/PLScSEM/>
+
 ## Summary
 
 See the template deployment at: <https://phdpablo.github.io/article-template/>; and get more information.
@@ -50,7 +60,7 @@ We inserted the following prompt in ChatGPT4o (on 2024-07-16) to generate each o
 
 *I'm developing READMEs to place in the folders of a model research project. I am following the structure proposed by TIER Protocol 4.0, according to its official website: <https://www.projecttier.org/tier-protocol/protocol-4-0/>; and the attached figure in this chat. I would like your help in proposing these READMEs. Next, I will tell you the folder in which I want to create the README, one by one, and the link to the summary website proposed by TIER protocol 4.0 and I need you to explain what is in that folder.*
 
-**The proponent of this template have, of course, carefully examined the AI outputs.**
+The proponent of this template have, of course, carefully examined the AI outputs.
 
 ## How to use this template?
 
