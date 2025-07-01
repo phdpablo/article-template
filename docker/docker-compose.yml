@@ -1,24 +1,26 @@
 # Location: docker/docker-compose.yml
 
-version: '3.9' # optional since v1.27.0
 services:
   rstudio:
     # Pinning to a specific version ensures long-term reproducibility.
     # This guarantees every user starts with Ubuntu 22.04, R 4.4.1, and Quarto 1.4.555.
     image: rocker/verse:4.4.1
 
-    # Maps port 8787 of the container to port 8787 on your local machine.
+    # Maps port 8787 of the container to port 8080 on your local machine.
     # The '127.0.0.1:' prefix is a security best practice, ensuring the service
     # is only accessible from your own computer.
     ports:
-      - "127.0.0.1:8787:8787"
+      - 127.0.0.1:8080:8787
 
     # Mounts the project's root directory (..) into the container.
     # This allows you to edit files on your computer and see the changes
     # instantly inside the container.
     volumes:
-      -..:/home/rstudio/project
+      - ..:/home/rstudio/article-template
 
+    # Sets the working directory to the project's root directory.
+    working_dir: /home/rstudio/article-template/project
+      
     # Defines essential environment variables.
     environment:
       # Sets a default password for RStudio Server.

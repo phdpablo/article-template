@@ -1,8 +1,12 @@
-.Rproj.user
+# R
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
-/project/.quarto/
-/project/site_libs/
+
+# Cache
+.cache/
+
+#Project
 /project/0*
 /adm/
