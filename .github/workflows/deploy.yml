@@ -21,6 +21,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Install TeXLive
+        run: sudo apt-get update && sudo apt-get install -y texlive-full
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
@@ -35,9 +41,6 @@ jobs:
       - name: Install knitr, rmarkdown and ggplot2
         run: |
           Rscript -e 'install.packages(c("knitr", "rmarkdown", "ggplot2"), repos="https://cloud.r-project.org")'
-
-      - name: Install pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc
 
       - name: Render Quarto Website
         run: quarto render
