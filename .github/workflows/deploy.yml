@@ -1,21 +1,15 @@
-# .github/workflows/deploy.yml
-
 name: Deploy Quarto Website
 
 on:
-  # Executa quando houver um push no branch main
   push:
     branches: [main]
-  # Permite executar este workflow manualmente pela aba Actions do GitHub
   workflow_dispatch:
 
-# Define permissões para o token do GitHub para permitir o deploy
 permissions:
   contents: write
   pages: write
   id-token: write
 
-# Permite apenas um deploy concorrente, cancelando execuções antigas
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -28,31 +22,27 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Quarto
-        - uses: quarto-dev/quarto-actions/setup@v2
-	- uses: quarto-dev/quarto-actions/publish@v1
-        # Você pode especificar uma versão do Quarto se precisar
+        uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.6.42
 
-      # Se seu projeto usa R ou Python, descomente e configure os blocos abaixo
+      # If using R
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
-          r-version: '4.5.1' # Ou a versão que você usa
+          r-version: '4.5.1'
 
       - name: Install R Dependencies
         uses: r-lib/actions/install-deps@v2
         with:
-          packages: any::tidyverse, any::rmarkdown # Adicione pacotes aqui
+          packages: any::tidyverse, any::rmarkdown
 
       - name: Render Quarto Website
         run: quarto render
 
-      - name: Deploy to GitHub Pages
-        uses: quarto-dev/quarto-cli-publish@v1
+      - name: Publish to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v1
         with:
-          # O target do deploy é o GitHub Pages
           target: gh-pages
         env:
-          # O token de autenticação é fornecido automaticamente pelo GitHub
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
