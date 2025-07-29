@@ -1,34 +1,62 @@
-# Location: docker/docker-compose.yml
+#
+# Docker Compose configuration for the article-template
+#
+# This file tells Docker how to build and run the project environment.
+# It is designed to be used with the start/stop scripts in the root directory.
+#
 
 services:
+  # Defines the main service for our environment, which we'll call 'rstudio'.
   rstudio:
-    # Pinning to a specific version ensures long-term reproducibility.
-    # This guarantees every user starts with Ubuntu 22.04, R 4.4.1, and Quarto 1.4.555.
-    image: rocker/verse:4.4.1
+    # Instructs Docker Compose to build a custom image. It will look for a
+    # 'Dockerfile' in the current directory (the 'docker/' directory)
+    # and follow its instructions.
+    build: 
+      context: ..
+      dockerfile: docker/Dockerfile
+    
+    # Assigns a name and tag to the image once it's built.
+    # This makes the image easier to find and manage locally.
+    image: article-template
 
-    # Maps port 8787 of the container to port 8080 on your local machine.
-    # The '127.0.0.1:' prefix is a security best practice, ensuring the service
-    # is only accessible from your own computer.
+    # Maps port 8080 on the host machine (your computer) to port 8787 inside
+    # the container, where RStudio Server is running. The '127.0.0.1' is a
+    # security measure to ensure the service is only accessible from your computer.
     ports:
       - 127.0.0.1:8080:8787
 
-    # Mounts the project's root directory (..) into the container.
-    # This allows you to edit files on your computer and see the changes
-    # instantly inside the container.
+    # Mounts the parent directory (the project root) into the container at
+    # '/home/rstudio/project'. This is the most important step for development,
+    # as it allows you to edit files on your computer and have the changes
+    # instantly reflected inside the container.
     volumes:
       - ..:/home/rstudio/article-template
+      - renv-cache:/home/rstudio/.cache/R/renv
+      - tinytex-cache:/home/rstudio/.TinyTeX
 
-    # Sets the working directory to the project's root directory.
-    working_dir: /home/rstudio/article-template/project
+    # Sets the default directory when you log into RStudio or access the
+    # container's terminal, so you start directly in your project folder.
+    working_dir: /home/rstudio/article-template
       
-    # Defines essential environment variables.
+    # Sets environment variables inside the container.
     environment:
-      # Sets a default password for RStudio Server.
+      # Sets the password for RStudio Server.
       - PASSWORD=pwd
-      # Fixes file permission issues on Linux and macOS, ensuring files
-      # created in the container are owned by you, not 'root'.
-      - USERID=$(id -u)
-      - GROUPID=$(id -g)
+      # For Linux/macOS users, this fixes file permission issues by ensuring
+      # files created inside the container are owned by the host user.
+      # This is safely ignored on Windows.
+      - USERID=${UID:-1000}
+      - GROUPID=${GID:-1000}
+      - RENV_PATHS_LIBRARY=/home/rstudio/article-template/renv/library
+      - RENV_PATHS_CACHE=/home/rstudio/.cache/R/renv
+      - RENV_PATHS_ROOT=/home/rstudio/article-template/renv
 
-    # Assigns a friendly, predictable name to the container.
+    # Assigns a fixed, human-readable name to the running container,
+    # making it easier to manage (e.g., 'docker stop article-template').
     container_name: article-template
+
+volumes:
+  # Defines a named volume for the R package library, so packages installed
+  # inside the container persist across container restarts.
+  renv-cache:
+  tinytex-cache:

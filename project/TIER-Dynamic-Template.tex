@@ -44,14 +44,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -67,15 +81,17 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 % definitions for citeproc citations
@@ -156,9 +172,7 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
+
 \usepackage{bookmark}
 
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -172,6 +186,7 @@
   citecolor={Blue},
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
+
 
 \title{TIER Dynamic Template}
 \usepackage{etoolbox}
@@ -187,6 +202,7 @@ Article}
 
 \begin{document}
 \maketitle
+
 
 \bookmarksetup{startatroot}
 
@@ -229,7 +245,7 @@ article (Figure~\ref{fig-tier-folders}).
 
 \begin{figure}
 
-\href{https://doi.org/10.5281/zenodo.13119617}{\includegraphics{Output/tier-folders.jpg}}
+\href{https://doi.org/10.5281/zenodo.13119617}{\pandocbounded{\includegraphics[keepaspectratio]{Output/tier-folders.jpg}}}
 
 \caption{\label{fig-tier-folders}TIER Protocol 4.0: Quarto Reproducible
 Dynamic Template. Illustration available at:
@@ -297,23 +313,23 @@ Table~\ref{tbl-diamonds}.
 
 \begin{figure}
 
-\includegraphics{04-results_files/figure-latex/-Scripts-AnalysisScripts-data_visualization-fig-pressure-output-1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{04-results_files/figure-latex/Scripts-AnalysisScripts-data_visualization-fig-pressure-output-1.png}}
 
 \caption{\label{fig-pressure}Pressure}
 
 \end{figure}%
 
 \begin{longtable}[]{@{}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1412}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1176}}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0941}}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0824}}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0824}}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.0824}}@{}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.1412}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.1176}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0941}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0824}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0824}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 18\tabcolsep) * \real{0.0824}}@{}}
 
 \caption{\label{tbl-diamonds}Diamonds characteristics}
 
@@ -441,6 +457,7 @@ Teal, T. K. (2017). Good enough practices in scientific computing.
 \url{https://doi.org/10.1371/journal.pcbi.1005510}
 
 \end{CSLReferences}
+
 
 
 
