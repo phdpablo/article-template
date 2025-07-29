@@ -11,6 +11,7 @@ _site/
 _temp/
 /site_libs/
 /04-results_files/
+docs/
 
 # Management
 deploy.sh
