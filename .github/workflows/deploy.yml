@@ -25,7 +25,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
       - name: Install TeXLive
-        run: sudo apt-get update && sudo apt-get install -y sheme-basic
+        run: sudo apt-get update && sudo apt-get install -y texlive-base
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
