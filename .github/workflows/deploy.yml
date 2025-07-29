@@ -32,9 +32,12 @@ jobs:
         with:
           r-version: '4.5.1'
 
-      - name: Install knitr and rmarkdown
+      - name: Install knitr, rmarkdown and ggplot2
         run: |
-          Rscript -e 'install.packages(c("knitr", "rmarkdown"), repos="https://cloud.r-project.org")'
+          Rscript -e 'install.packages(c("knitr", "rmarkdown", "ggplot2"), repos="https://cloud.r-project.org")'
+
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
 
       - name: Render Quarto Website
         run: quarto render
