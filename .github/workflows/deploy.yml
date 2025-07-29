@@ -36,7 +36,7 @@ jobs:
         run: quarto render
 
       - name: Publish to GitHub Pages
-        uses: quarto-dev/quarto-actions/publish@v1
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
