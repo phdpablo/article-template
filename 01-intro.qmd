@@ -1,0 +1,13 @@
+# Introduction
+
+The text below is intended to be an instructive example...
+
+Gain some additional knowledge regarding Open Science and reproducible research [@klein2018; @kathawalla2021]
+
+This is an example of how to integrate an external document into your article (@fig-tier-folders).
+
+[![TIER Protocol 4.0: Quarto Reproducible Dynamic Template. Illustration available at: https://doi.org/10.5281/zenodo.13119617](Output/tier-folders.jpg){#fig-tier-folders}](https://doi.org/10.5281/zenodo.13119617)
+
+For more details about **TIER Protocol 4.0** visit the page: <https://www.projecttier.org/> and/or read the @domingos2021 article.
+
+Read the README files for the [project root](https://github.com/phdpablo/article-template/) and [this repository](https://github.com/phdpablo/article-template) to learn more about how this protocol works with this template.

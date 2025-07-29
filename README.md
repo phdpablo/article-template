@@ -146,4 +146,4 @@ Since Ubuntu Jammy (22.04 LTS), R 4.4.1, RStudio 2024.04.2 (Build 764) and Quart
 
 The figure below, available at: <https://doi.org/10.5281/zenodo.13119679>, is intended to illustrate the steps discussed above.
 
-![Roadmap for Developing a Dynamic and Reproducible Research](project/Output/roadmap-template.jpg)
+![Roadmap for Developing a Dynamic and Reproducible Research](Output/roadmap-template.jpg)

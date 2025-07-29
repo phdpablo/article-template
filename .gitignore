@@ -1,12 +1,19 @@
-# R
+# R/RStudio
 .Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
 
-# Cache
-.cache/
+# Quarto and builds
+.quarto/
+_book/
+_site/
+_temp/
+/site_libs/
+/04-results_files/
+docs/
 
-#Project
-/project/0*
-/adm/
+# Management
+deploy.sh
+Adm/
+!Adm/README.md

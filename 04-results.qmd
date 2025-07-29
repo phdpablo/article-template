@@ -1,0 +1,13 @@
+# Results
+
+The text below is intended to be an instructive example...
+
+Include tables, graphs, figures, and other visual aids from your scripts in the `AnalysisScripts` folder as you write up your narrative. To learn how to complete this integration, look to [Quarto's documentation embedding](https://quarto.org/docs/authoring/notebook-embed.html).
+
+I've included two examples of how to include results from your analytic scripts into your story below: @fig-pressure and @tbl-diamonds.
+
+{{< embed /Scripts/AnalysisScripts/data_visualization.qmd#fig-pressure >}}
+
+{{< embed /Scripts/AnalysisScripts/data_visualization.qmd#tbl-diamonds >}}
+
+To learn how it was done, follow the code! Please take note that I was only referring to the output that was suggested in the `data_visualization.qmd` script located in the `Scripts/AnalysisScripts` folder. You can refer to the script for more information.
