@@ -10,8 +10,7 @@ _book/
 _site/
 _temp/
 /site_libs/
-*_files/
-docs/
+/04-results_files/
 
 # Management
 deploy.sh
