@@ -10,10 +10,12 @@ _book/
 _site/
 _temp/
 /site_libs/
-/04-results_files/
+*_files/
 docs/
 
 # Management
 deploy.sh
-Adm/
-!Adm/README.md
+adm/
+!adm/README.md
+
+/.quarto/
