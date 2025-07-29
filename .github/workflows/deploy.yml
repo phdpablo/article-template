@@ -33,9 +33,9 @@ jobs:
           r-version: '4.5.1'
 
       - name: Install R Dependencies
-        uses: r-lib/actions/install-deps@v2
-        with:
-          packages: any::tidyverse, any::rmarkdown
+  	uses: r-lib/actions/setup-r-dependencies@v2
+  	with:
+    	  packages: any::tidyverse, any::rmarkdown
 
       - name: Render Quarto Website
         run: quarto render
