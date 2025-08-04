@@ -6,4 +6,6 @@ This is a template to create a project article using the [Quarto book](https://q
 
 **How cite this template?**
 
-Rogers, P. (2024). TIER Protocol 4:0: Dynamic Template. <https://doi.org/10.17605/OSF.IO/NJDQ5>
+Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Second Act. *BAR - Brazilian Administration Review*, *22*(2), e250116. <https://doi.org/10.1590/1807-7692bar2025250116>
+
+Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - First Act. *BAR - Brazilian Administration Review*, *22*(1), e250079. <https://doi.org/10.1590/1807-7692bar2025250079>
