@@ -3,6 +3,8 @@ project: # https://quarto.org/docs/projects/quarto-projects.html
   # if change this key, maybe you have a problem with the structure output
   output-dir: docs
   # not change this key if you want to deploy in GitHub Pages
+  post-render: render_cleanup.R
+  # for clean the output directory after render
 resources:
   - Data/
   - Output/

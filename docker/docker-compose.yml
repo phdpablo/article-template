@@ -1,0 +1,29 @@
+services:
+  article:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: phdpablo/article-template:4.5.1
+    container_name: ${PROJECT_NAME:-article-template}
+    ports:
+      - "${RSTUDIO_PORT:-8787}:8787"
+    volumes:
+      - ..:/home/rstudio/project
+      - renv_cache:/renv/cache
+      - renv_library:/renv/library
+      - ./cache/.config:/home/rstudio/.config
+      - ./cache/.local:/home/rstudio/.local
+      - ./cache/.rstudio:/home/rstudio/.rstudio
+      - ./cache/.R:/home/rstudio/.R
+    environment:
+      - DISABLE_AUTH=true
+      - RENV_PATHS_CACHE=/renv/cache
+      - RENV_PATHS_LIBRARY=/renv/library
+    command: ["/bin/sh", "-c", "chown -R rstudio:rstudio /home/rstudio/project /renv /home/rstudio/.config /home/rstudio/.local /home/rstudio/.rstudio /home/rstudio/.R && /init"]
+    restart: unless-stopped
+
+volumes:
+  renv_cache:
+    name: renv_cache
+  renv_library:
+    name: renv_library
