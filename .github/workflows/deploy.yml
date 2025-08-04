@@ -35,13 +35,13 @@ jobs:
         with:
           r-version: '4.5.1'
 
+      - name: Install knitr, rmarkdown and ggplot2
+        run: |
+          Rscript -e 'install.packages(c("knitr", "rmarkdown", "ggplot2", "tinytex"), repos="https://cloud.r-project.org")'
+
       - name: Install TinyTex remain packs for render
         run: |
           Rscript -e 'tinytex::tlmgr_install(c('amsfonts', 'unicode-math', 'booktabs', 'caption', 'float'))'
-
-      - name: Install knitr, rmarkdown and ggplot2
-        run: |
-          Rscript -e 'install.packages(c("knitr", "rmarkdown", "ggplot2"), repos="https://cloud.r-project.org")'
 
       - name: Render Quarto Website
         run: quarto render
