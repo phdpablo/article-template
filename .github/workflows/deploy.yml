@@ -1,53 +1,96 @@
+# This workflow file automates the process of building and deploying
+# your Quarto website to GitHub Pages whenever you make changes.
+
+# --- Workflow Metadata ---
+# Give the workflow a descriptive name that appears on GitHub
 name: Deploy Quarto Website
 
+# --- Trigger Events ---
+# Define when this workflow should run automatically
 on:
+  # Run the workflow when commits are pushed to the 'main' branch
   push:
     branches: [main]
+  # Also allow manual triggering of the workflow from the GitHub Actions web interface
   workflow_dispatch:
 
+# --- Permissions ---
+# Grant necessary permissions to the workflow for interacting with GitHub features
 permissions:
+  # Permission to modify the repository's contents (needed for gh-pages branch)
   contents: write
+  # Permission to update GitHub Pages settings and content
   pages: write
+  # Permission to request a GitHub ID token for authentication
   id-token: write
 
+# --- Concurrency Control ---
+# Manage workflow runs to prevent conflicts
 concurrency:
+  # Group runs under the name "pages"
   group: "pages"
+  # If a new run is triggered while one is in progress, cancel the older one
   cancel-in-progress: true
 
+# --- Job Definition ---
+# Define the sequence of tasks (a single job named 'deploy' in this case)
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    # Specify the virtual machine environment to run the job on
+    runs-on: ubuntu-latest # Use the latest Ubuntu Linux environment
+    # List the individual steps to perform within the job
     steps:
+      # --- Step 1: Get Code ---
+      # Check out (download) your repository's code into the runner's workspace
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # Use the official checkout action
 
+      # --- Step 2: Install System Dependencies ---
+      # Install Pandoc, a document conversion tool required by Quarto
       - name: Install pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
+      # Install a full TeXLive distribution for PDF rendering capabilities
+      # Note: This can be time-consuming. A minimal install might suffice
+      # depending on your specific document requirements.
       - name: Install TeXLive
         run: sudo apt-get update && sudo apt-get install -y texlive-full
 
+      # --- Step 3: Setup Tools ---
+      # Install and set up a specific version of Quarto
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+        uses: quarto-dev/quarto-actions/setup@v2 # Use the official Quarto setup action
         with:
-          version: 1.6.42
+          version: 1.6.42 # Specify the Quarto version to use
 
-      # If using R
+      # Install and set up a specific version of R
       - name: Setup R
-        uses: r-lib/actions/setup-r@v2
+        uses: r-lib/actions/setup-r@v2 # Use the official R setup action
         with:
-          r-version: '4.5.1'
+          r-version: '4.5.1' # Specify the R version to use
 
+      # --- Step 4: Install R Packages ---
+      # Install essential R packages needed to render your Quarto document
+      # These are typically required for R code execution, R Markdown rendering,
+      # and creating plots.
       - name: Install knitr, rmarkdown and ggplot2
         run: |
           Rscript -e 'install.packages(c("knitr", "rmarkdown", "ggplot2"), repos="https://cloud.r-project.org")'
 
+      # --- Step 5: Render Website ---
+      # Execute the Quarto command to build your website
+      # This reads your _quarto.yml and .qmd files to generate the output
+      # (usually HTML files placed in a directory like _book or docs).
       - name: Render Quarto Website
         run: quarto render
 
+      # --- Step 6: Deploy to GitHub Pages ---
+      # Publish the rendered website files to the special 'gh-pages' branch,
+      # which GitHub Pages uses to serve your site.
       - name: Publish to GitHub Pages
-        uses: quarto-dev/quarto-actions/publish@v2
+        uses: quarto-dev/quarto-actions/publish@v2 # Use the official Quarto publish action
         with:
-          target: gh-pages
+          target: gh-pages # Specify the target branch for GitHub Pages
+        # Provide an authentication token so the action can push to your repository
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Use the automatically provided token

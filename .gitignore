@@ -18,3 +18,5 @@ docs/
 deploy.sh
 adm/
 !adm/README.md
+
+/.quarto/
