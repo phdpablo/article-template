@@ -1,13 +1,32 @@
 # Introduction
 
-The text below is intended to be an instructive example...
+<br>
 
-Gain some additional knowledge regarding Open Science and reproducible research [@klein2018; @kathawalla2021]
+This section introduces the **TIER Protocol 4.0 Dynamic Template**. This is not an introduction to a research topic, but rather an explanation of the template's purpose and structure.
 
-This is an example of how to integrate an external document into your article (@fig-tier-folders).
+This template is designed for researchers, particularly in the applied social sciences, who want to create **dynamic and reproducible research articles**. It aims to make the principles of reproducible research more accessible by providing a pre-structured project environment.
 
-[![TIER Protocol 4.0: Quarto Reproducible Dynamic Template. Illustration available at: https://doi.org/10.5281/zenodo.13119617](Output/tier-folders.jpg){#fig-tier-folders}](https://doi.org/10.5281/zenodo.13119617)
+The template integrates several key tools and practices:
 
-For more details about **TIER Protocol 4.0** visit the page: <https://www.projecttier.org/> and/or read the @domingos2021 article.
+-   **Quarto Book:** For authoring dynamic documents that seamlessly blend narrative text, executable code (R), and the resulting outputs (tables, figures). *This document you are reading is an example of a Quarto book*.
 
-Read the README files for the [project root](https://github.com/phdpablo/article-template/) and [this repository](https://github.com/phdpablo/article-template) to learn more about how this protocol works with this template.
+-   **TIER Protocol 4.0:** Provides a standardized folder structure (`Data/`, `Scripts/`, `Output/`) to organize your project logically and transparently, making it easier for others (and your future self) to understand and reproduce your work.
+
+-   **Git/GitHub:** Built-in version control allows you to track changes to your project over time, facilitating collaboration and providing a history of your work.
+
+-   **Environment Control:** The template supports three levels of environment management:
+
+    -   **Proper Reproducibility:** Using the R `renv` package to snapshot and restore specific versions of R packages.
+    -   **Full Reproducibility (Recommended):** Using **Docker** (see `docker/` folder) to containerize the entire computational environment (R, RStudio, Quarto, packages, LaTeX). This ensures that your project runs identically on any machine with Docker installed, eliminating "it works on my machine" issues.
+
+-   **Easy Sharing:** Pre-configured for publishing your dynamic article to **GitHub Pages** using GitHub Actions (`.github/workflows/deploy.yml`) and designed for sharing on the **Open Science Framework (OSF)**.
+
+This example document demonstrates how these components work together. Gain some additional knowledge regarding Open Science and Reproducible Research [@klein2018; @kathawalla2021; @limongi2025a; @limongi2025b].
+
+This is an example of how to integrate an external document into your article (@fig-tier-folders), showcasing the TIER Protocol 4.0 folder structure.
+
+[![TIER Protocol 4.0: Quarto Reproducible Dynamic Template. Illustration available at: https://doi.org/10.5281/zenodo.13119617](Output/tier-folders.jpg){#fig-tier-folders width="100%"}](https://doi.org/10.5281/zenodo.13119617)
+
+For more details about **TIER Protocol 4.0**, visit the page: <https://www.projecttier.org/> and/or read the @domingos2021 article.
+
+Read the README files for the [project root](https://github.com/phdpablo/article-template/) and explore the repository structure [on GitHub](https://github.com/phdpablo/article-template) to learn more about how this protocol works with this template.

@@ -1,5 +1,33 @@
 # Background
 
-The text below is intended to be an instructive example...
+<br>
 
-Make sure to look into the thought of reproducible research practice [@sullivan2019; @wilson2017; @vuorre2018; @gilroy2019; @dogucu2022; @wiebels2021].
+This section provides background on the concepts of reproducibility and the tools integrated into this template.
+
+Reproducible research is a cornerstone of good scientific practice. It ensures that findings are reliable and that the scientific process is transparent. The tools and structure provided by this template are designed to support these principles.
+
+Make sure to look into the thought of reproducible research practice [@sullivan2019; @wilson2017; @vuorre2018; @gilroy2019; @dogucu2022; @wiebels2021; @limongi2025a; @limongi2025b].
+
+**Understanding Reproducibility Levels:**
+
+The template is designed to support different levels of reproducibility, as illustrated in the project's Zenodo record:
+
+-   **Minimal Reproducibility:** Using the template structure, editing READMEs, and sharing on OSF.
+-   **Proper Reproducibility:** Adding Quarto narrative (with RStudio and Git/Github) development and using `renv` for R package management.
+-   **Full Reproducibility (This Template's Strength):** Incorporating Docker to containerize the entire computational environment, ensuring maximum consistency and ease of replication. This is achieved using the files in the `docker/` folder.
+
+**The Role of Dynamic Documents:**
+
+Dynamic documents, like the ones created with Quarto (`.qmd` files), play a crucial role. They allow the narrative of your research to be directly linked to the analysis code. When you render the document, the code is executed, and the results (tables, figures, numbers) are automatically inserted into the text. This reduces manual errors and ensures that your narrative always reflects the latest analysis.
+
+**TIER Protocol 4.0 Structure:**
+
+The folder structure adheres to the TIER Protocol 4.0:
+
+-   **`Data/`**: Stores raw, intermediate, and final data files.
+-   **`Scripts/`**: Contains R scripts for data processing, analysis, and visualization. Complex analyses are best kept here.
+-   **`Output/`**: Stores generated results like tables, figures, and intermediate data files.
+-   **`docs/`** (Root): Contains the final rendered output (HTML, PDF) for web publication.
+-   **Root**: Contains main narrative files (`index.qmd`, `01-intro.qmd`, etc.), project configuration (`_quarto.yml`), bibliography (`references.bib`), and CSL style file (`apa7ed.csl`).
+
+This structure promotes clarity and makes it easier for others to navigate your project.

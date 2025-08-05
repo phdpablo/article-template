@@ -1,8 +1,14 @@
 # Abstract {.unnumbered .unlisted}
 
-This is a template to create a project article using the [Quarto book](https://quarto.org/docs/books/) and [TIER protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/) structures. Quarto is a document authoring and publishing tool that allows you to create books, reports, and other documents that are rich in content and fully reproducible. It is integrated with RStudio and is built on markdown and works with R language, Python, Julia, and Observable. The TIER protocol 4.0 specifies the contents and organization of reproduction documentation for a project involving computations with statistical data analysis. The project is already configured for versioning with Git/GitHub, environment control with `renv` and/or Docker, and publication on GitHub Pages.
+<br>
 
-**Key-words:** Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv, GitHub Pages.
+This document is a deployment of the **TIER Protocol 4.0: Dynamic Template**. It serves as an example of how the template can be used and showcases its features. This template provides a structured framework for creating **dynamic and fully reproducible research articles** using **Quarto**, integrated with **RStudio**, **Git/GitHub**, and designed for sharing on platforms like **OSF** and **GitHub Pages**.
+
+The template is organized according to the **TIER Protocol 4.0**, ensuring clarity and reproducibility. It is pre-configured for **environment management** using `renv` and **Docker**, guaranteeing that the computational environment is consistent and reproducible. This example demonstrates the integration of narrative text, executable R code, and outputs (like tables and figures) within a single, cohesive document.
+
+This deployment illustrates the project structure and the use of Quarto's book format. It is not a research article on a specific topic but a guide on how to use the template itself.
+
+**Key-words:** Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv, Docker, GitHub Pages.
 
 **How cite this template?**
 
