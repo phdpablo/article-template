@@ -2,25 +2,25 @@
 
 ## Overview
 
-The `Results` folder contains the final results generated from the data analysis. This includes all tables, figures, statistical outputs, and any other materials that present the findings of the research project. Proper organization and documentation of these results are crucial for ensuring the transparency, reproducibility, and comprehensibility of the research outcomes.
+The `Results` folder stores the final results from the data analysis. This includes all tables, figures, statistical outputs, and other materials that present the research findings. Organizing and documenting these results properly is crucial for transparency, reproducibility, and clarity.
 
 ## Contents
 
-If further organization is required, you can split this folder up into smaller ones. Here are some common subfolders that you might consider creating within the `Results` folder:
+You can split this folder into smaller ones if needed. Here are common subfolders for the `Results` directory:
 
-- **Tables**: This subfolder contains all the tables generated from the analysis, presenting detailed numerical results and statistical summaries.
-- **Figures**: This subfolder includes all the graphical representations of the data, such as charts, graphs, and plots that visualize the research findings.
-- **Statistical Outputs**: This subfolder holds the outputs of statistical analyses, including regression models, hypothesis tests, and other statistical evaluations.
-- **Reports and Summaries**: This subfolder contains any comprehensive reports or summaries that synthesize the analysis results, providing interpretations, conclusions, and discussions.
+-   **Tables**: Stores all tables from the analysis. These present detailed numerical results and statistical summaries.
+-   **Figures**: Includes all graphical representations. This covers charts, graphs, and plots that visualize findings.
+-   **Statistical Outputs**: Holds outputs from statistical analyses. This includes regression models, hypothesis tests, and other evaluations.
+-   **Reports and Summaries**: Contains comprehensive reports or summaries. These synthesize analysis results, offering interpretations and conclusions.
 
 ## Guidelines
 
-- **File Naming**: Use descriptive and consistent names for the result files to indicate their contents and the analysis they pertain to. For example, `regression_results.csv`, `summary_statistics.txt`, `data_visualization.png`.
-- **Documentation**: Ensure each result file is accompanied by documentation that explains its contents, how it was generated, and any important considerations or limitations.
-  - **Header Comments**: For text-based outputs, include a header with the file's name, author, date, and a brief description of its contents.
-  - **Inline Comments**: Use inline comments within scripts that generate outputs to explain specific lines or sections of code that produce important results.
-- **Organization**: Keep result files organized in subfolders if necessary to categorize different types of results (e.g., `Tables`, `Figures`, `Statistics`).
-- **Reproducibility**: Ensure that each result can be reproduced by running the corresponding analysis scripts with the same input data. Document any dependencies or software requirements needed to generate the results.
+-   **File Naming**: Use descriptive, consistent names for result files. Names should indicate content and related analysis. Examples: `regression_results.csv`, `summary_statistics.txt`, `data_visualization.png`.
+-   **Documentation**: Document each result file. Explain its content, how it was generated, and important considerations.
+    -   **Header Comments**: For text files, include a header. List the file name, author, date, and a brief content description.
+    -   **Inline Comments**: Use inline comments in scripts. Explain specific lines or sections that produce key results.
+-   **Organization**: Organize result files with subfolders if needed. This helps categorize different types (e.g., `Tables`, `Figures`, `Statistics`).
+-   **Reproducibility**: Ensure each result can be reproduced. Run the corresponding analysis scripts with the same input data. Document dependencies or software requirements.
 
 ## Additional Resources
 

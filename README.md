@@ -6,7 +6,7 @@ This repository provides a template for creating a **dynamic and fully reproduci
 
 The template is designed to meet the **Full Reproducibility** standard by encapsulating the entire computational environment, including R, R packages (managed by `renv`), and LaTeX dependencies, within a Docker container. This ensures that your research can be replicated exactly, regardless of the user's local machine setup.
 
-The folder structure of the repository is summarized in the picture below, and more information may be found in its deployment, which serves as a showcase: <https://phdpablo.github.io/article-template/>.
+The image below provides a summary of the repository's folder structure. There is a `README.md` file including an Overview, Contents, Guidelines, and Additional Resources in every TIER 4.0 Protocol folder. Its deployment, which acts as a showcase, provides more details: <https://phdpablo.github.io/article-template/>.
 
 ![TIER Protocol 4.0: Quarto Reproducible Dynamic Template](Output/tier-folders.jpg)
 
