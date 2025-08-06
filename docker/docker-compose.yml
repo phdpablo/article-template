@@ -1,29 +1,121 @@
+# This file defines the services, networks, and volumes for the Dockerized environment
+# using Docker Compose. It orchestrates the creation and running of the RStudio container.
+
+# --- Services Definition ---
+# Defines the application services to run. In this case, a single service named 'article'.
 services:
   article:
+    # --- Build Configuration ---
+    # Specifies how to build the Docker image for this service.
     build:
+      # The build context is the parent directory (..).
+      # This allows the Dockerfile to access files in the project root (like renv.lock).
       context: ..
+      # The path to the Dockerfile, relative to the build context.
+      # It's located in the 'docker' subdirectory of the project root.
       dockerfile: docker/Dockerfile
+    
+    # --- Image Naming ---
+    # The name and tag for the built image.
+    # This makes it easier to identify and manage.
     image: phdpablo/article-template:4.5.1
+    
+    # --- Container Naming ---
+    # Sets a custom name for the running container.
+    # Uses the PROJECT_NAME environment variable (set by start scripts).
+    # If PROJECT_NAME is not set, it defaults to 'article-template'.
     container_name: ${PROJECT_NAME:-article-template}
+    
+    # --- Port Mapping ---
+    # Maps an IP on the host machine and maintains ports 8787:8787 between container and host.
+    # Uses the RSTUDIO_IP environment variable (set by start scripts).
+    # RSTUDIO_IP starts at 127.0.0.1 for the first container, 127.0.0.2 for the second and so on.
+    # Format: HOST_PORT:CONTAINER_PORT
     ports:
-      - "${RSTUDIO_PORT:-8787}:8787"
+      - ${RSTUDIO_IP:-127.0.0.1}:8787:8787
+    
+    # --- Volume Mounts ---
+    # Defines directories or files from the host machine that are mounted
+    # into the container's filesystem. This is crucial for data persistence
+    # and sharing configuration.
     volumes:
+      # --- Project Directory ---
+      # Mounts the entire project directory (parent folder of 'docker/')
+      # from the host to the container's /home/rstudio/project directory.
+      # This ensures all project files are accessible and changes persist on the host.
       - ..:/home/rstudio/project
-      - renv_cache:/renv/cache
+       
+      # --- Global renv Cache Volume ---
+      # Mounts a named Docker volume for the global renv package cache.
+      # This volume is shared across different projects/containers.
+      # It stores the downloaded .tar.gz files for R packages, speeding up restores.
+      # The local path '/renv/cache' inside the container is mapped to this volume.
+      - renv_cache:/renv/cache 
+       
+      # --- Project renv Library Volume ---
+      # Mounts a named Docker volume for the project-specific renv library.
+      # This volume stores the actual installed R packages for this project.
+      # Sharing this volume ensures packages aren't reinstalled if the container is recreated
+      # but the volume persists. (Note: Project-local library is often preferred for isolation).
       - renv_library:/renv/library
+
+      # --- RStudio Configuration Caches (Local to Project) ---
+      # These volumes persist RStudio settings (appearance, layout, history, etc.)
+      # specific to this project instance. They are stored in the 'docker/cache' directory
+      # on the host to keep project-specific settings separate.
+      
+      # RStudio and system config files
       - ./cache/.config:/home/rstudio/.config
+      # Local user data and application state
       - ./cache/.local:/home/rstudio/.local
+      # RStudio-specific settings and session data
       - ./cache/.rstudio:/home/rstudio/.rstudio
+      # R-specific user settings (e.g., R console history)
       - ./cache/.R:/home/rstudio/.R
+
+    # --- Environment Variables ---
+    # Sets environment variables inside the container.
     environment:
+      # --- RStudio Authentication ---
+      # Disables the need for a username/password when accessing RStudio in the browser.
       - DISABLE_AUTH=true
+      
+      # --- renv Path Configuration ---
+      # Explicitly set renv paths inside the container to match the mounted volumes.
+      # These should align with the ENV variables set in the Dockerfile and the volume mounts.
+      # Even if set in Dockerfile, defining them here ensures they are used.
       - RENV_PATHS_CACHE=/renv/cache
       - RENV_PATHS_LIBRARY=/renv/library
+
+    # --- Custom Startup Command ---
+    # Overrides the default command specified in the Dockerfile.
+    # This command is run when the container starts.
+    # It performs two main actions:
+    # 1. Fixes file ownership: Ensures the 'rstudio' user owns the mounted project directory
+    #    and the cache/configuration directories. This is important for read/write permissions.
+    # 2. Starts the main process: Executes the '/init' script, which is the standard way
+    #    to start RStudio Server in the rocker/verse image.
     command: ["/bin/sh", "-c", "chown -R rstudio:rstudio /home/rstudio/project /renv /home/rstudio/.config /home/rstudio/.local /home/rstudio/.rstudio /home/rstudio/.R && /init"]
+    
+    # --- Restart Policy ---
+    # Defines the container's restart behavior.
+    # 'unless-stopped' means the container will always restart if it stops,
+    # except if it was manually stopped by the user.
     restart: unless-stopped
 
+# --- Volumes Definition ---
+# Defines named volumes that can be used by services.
+# These volumes are managed by Docker and persist data outside of containers.
 volumes:
+  # --- Global renv Cache Volume ---
+  # Named volume for storing the global renv package cache.
+  # Shared across projects for efficiency.
   renv_cache:
+    # Explicitly name the volume. Helps with identification.
     name: renv_cache
+  
+  # --- Project renv Library Volume ---
+  # Named volume for storing the project-specific R package library.
   renv_library:
+    # Explicitly name the volume.
     name: renv_library

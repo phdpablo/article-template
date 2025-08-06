@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# This script stops and removes the containers associated with this project.
-# It reads the docker-compose.yml file in the current directory.
+# Use the parent directory's name as the project name
+PROJECT_NAME=$(basename "$(dirname "$PWD")")
 
-echo "🛑 Stopping and removing the RStudio container for this project..."
-docker-compose down
+echo "🛑 Stopping and removing the RStudio container for project '$PROJECT_NAME'..."
+docker-compose -p "$PROJECT_NAME" down
 echo "✅ Environment stopped."

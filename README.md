@@ -1,12 +1,14 @@
-# TIER Protocol 4.0: Dynamic and Reproducible Research Article Template
+# Dynamic and Reproducible Research Article Template
 
-[![OSF](https://img.shields.io/badge/OSF-10.17605/OSF.IO/NJDQ5-blue)](https://osf.io/njdq5/) [![GitHub Pages](https://img.shields.io/github/deployments/phdpablo/article-template/github-pages?label=GitHub%20Pages)](https://phdpablo.github.io/article-template/) [![License](https://img.shields.io/github/license/phdpablo/article-template)](LICENSE) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13119679.svg)](https://doi.org/10.5281/zenodo.13119679)
+[![OSF](https://img.shields.io/badge/OSF-10.17605/OSF.IO/NJDQ5-blue)](https://osf.io/njdq5/) [![GitHub Pages](https://img.shields.io/github/deployments/phdpablo/article-template/github-pages?label=GitHub%20Pages)](https://phdpablo.github.io/article-template/) [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13119679.svg)](https://doi.org/10.5281/zenodo.13119679)
 
 This repository provides a template for creating a **dynamic and fully reproducible research article** using **Quarto**, **RStudio**, the **TIER Protocol 4.0**, and **Docker**. It offers a structured project organization, integrates seamlessly with Git/GitHub for version control, and is configured for easy publication on **GitHub Pages** and **OSF**.
 
 The template is designed to meet the **Full Reproducibility** standard by encapsulating the entire computational environment, including R, R packages (managed by `renv`), and LaTeX dependencies, within a Docker container. This ensures that your research can be replicated exactly, regardless of the user's local machine setup.
 
-Explore the deployed template: <https://phdpablo.github.io/article-template/>
+The folder structure of the repository is summarized in the picture below, and more information may be found in its deployment, which serves as a showcase: <https://phdpablo.github.io/article-template/>.
+
+![TIER Protocol 4.0: Quarto Reproducible Dynamic Template](Output/tier-folders.jpg)
 
 ## Table of Contents
 
@@ -62,7 +64,7 @@ This method uses the pre-configured Docker setup for the easiest and most reprod
     -   **macOS/Linux:** Run `./start.sh` (you might need `chmod +x start.sh` first).
     -   This script automatically finds an available port, builds the Docker image (if needed), starts a container with the name of the folder you cloned/downloaded, and opens RStudio in your browser.
 4.  **Access RStudio:**
-    -   Your browser should automatically open RStudio at `http://localhost:<port>`. If not, go to your browser.
+    -   Your browser should automatically open RStudio at `http://ip_host:8787`. If not, go to your browser.
     -   You are logged in automatically as the `rstudio` user.
     -   Your project files are located in `/home/rstudio/project`.
 5.  **Start Working:**
@@ -89,7 +91,7 @@ If you prefer manual control or want to understand the process:
 
 ## Accessing the RStudio Environment {#accessing-the-rstudio-environment}
 
--   **URL:** `http://localhost:<port>` (The `start` scripts automatically open this).
+-   **URL:** `http://ip_host:8787` (The `start` scripts automatically open this).
 -   **Authentication:** No login required (`DISABLE_AUTH=true`).
 -   **User:** You are logged in as the `rstudio` user.
 -   **Project Location (in Container):** `/home/rstudio/project` (This is your local project folder mounted inside the container).
