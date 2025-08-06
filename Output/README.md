@@ -2,21 +2,21 @@
 
 ## Overview
 
-The `Output` folder contains the final results and products of the data analysis. This includes tables, figures, statistical outputs, and any other materials generated as part of the analysis process. Proper organization and documentation of these outputs are essential for ensuring the reproducibility and transparency of the research findings.
+The `Output` folder stores the final results and products of the data analysis. This includes tables, figures, statistical outputs, and other materials generated during the analysis. Organizing and documenting these outputs properly is essential for research transparency and reproducibility.
 
 ## Contents
 
-- **Final Results**: This includes all tables, figures, and statistical outputs generated from the analysis scripts.
-- **Reports and Summaries**: Any reports or summaries that synthesize the results and provide interpretations or conclusions.
+-   **Final Results**: All tables, figures, and statistical outputs created by the analysis scripts.
+-   **Reports and Summaries**: Reports or summaries that interpret the results and present conclusions.
 
 ## Guidelines
 
-- **File Naming**: Use descriptive and consistent names for the output files to indicate their contents and the analysis they pertain to. For example, `regression_results.csv`, `summary_statistics.txt`, `data_visualization.png`.
-- **Documentation**: Ensure each output file is accompanied by documentation that explains its contents, how it was generated, and any important considerations or limitations.
-  - **Header Comments**: For text-based outputs, include a header with the file's name, author, date, and a brief description of its contents.
-  - **Inline Comments**: Use inline comments within scripts that generate outputs to explain specific lines or sections of code that produce important results.
-- **Organization**: Keep output files organized in subfolders if necessary to categorize different types of outputs (e.g., `Tables`, `Figures`, `Statistics`).
-- **Version Control**: Use version control practices to track changes in output files. Document major changes and maintain a history of output versions.
+-   **File Naming**: Use descriptive, consistent names. Names should indicate the content and related analysis. Examples: `regression_results.csv`, `summary_statistics.txt`, `data_visualization.png`.
+-   **Documentation**: Document each output file. Explain its content, how it was generated, and important considerations.
+    -   **Header Comments**: For text files, include a header. List the file name, author, date, and a brief content description.
+    -   **Inline Comments**: Use inline comments in scripts. Explain specific lines or sections that produce key results.
+-   **Organization**: Organize output files with subfolders if needed. This helps categorize different types (e.g., `Tables`, `Figures`, `Statistics`).
+-   **Version Control**: Use version control for output files. Record major changes and maintain a version history.
 
 ## Additional Resources
 
