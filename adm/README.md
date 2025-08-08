@@ -1,15 +1,25 @@
-The creation of an `adm` (Administration) folder in your research project, which will be excluded from Git version control, is essential for several reasons. This folder is designated to contain sensitive and confidential data, such as personal details of research participants, financial information, contracts, and confidentiality agreements. These documents must be kept private and not shared publicly or with the broader research community.
+# Adm Folder
 
-Additionally, the `adm` folder will house temporary and work-related documents, including notes, drafts, task lists, and meeting notes. These are frequently updated and not pertinent to the main code repository, ensuring that only the most relevant information is tracked and versioned.
+## Overview
 
-Additionally, files unique to the local work environment will be kept in the `adm` folder. These could consist of credentials, API keys, and local software configurations. These files should be kept out of the version control system to avoid unintentional exposure and are not required for other participants to duplicate the project.
+The `Adm` (Administration) folder serves as a secure and organized space for project-related materials that should not be included in version control or public sharing. This folder is specifically excluded from Git tracking (via `.gitignore`) and is not published to platforms like GitHub Pages. It centralizes sensitive, temporary, local, and administrative files, keeping the main project repository clean and focused on the core, reproducible components.
 
-As a work-in-progress backup repository, the `adm` folder lets you keep temporary versions and backups without adding needless changes to the Git history. This procedure maintains the primary repository organized and concentrated on important updates and modifications.
+## Contents
 
-In addition, the folder contains project management-related administrative items such budgets, timelines, and resource planning documents. These don't have to be a part of the version-controlled codebase; they are essential for the project's internal management.
+-   **Sensitive and Confidential Data**: Personal information of participants, financial records, contracts, non-disclosure agreements (NDAs), and other private documents.
+-   **Temporary and Work-in-Progress Files**: Drafts, notes, "to-do" lists, meeting minutes, and intermediary files (e.g., source files for external illustrations).
+-   **Local Environment Files**: Machine-specific configurations, credentials, API keys, or local database connection strings.
+-   **Project Management Documents**: Budgets, timelines, resource allocation plans, and internal administrative records.
+-   **Non-Essential Project Files**: Files related to the project but not required for its technical execution or reproduction, such as articles written in a native language or personal organizational tools.
 
-Finally, you keep a clean and orderly repository in Git by ignoring the `adm` folder. By taking this method, the integrity and clarity of the commit history are preserved since only files and code that are directly important to the development and replication of the research are tracked.
+## Guidelines
 
-For instance, the authors of this template typically write the articles in their native language, and the mess stays in that folder. This folder is also used for 'to do' notes to keep track of tasks, intermediary files for creating external illustrations to the scripts, and other project-related external files.
+-   **Exclusion from Version Control**: The `Adm` folder is intentionally ignored by Git. Do not place files here that are necessary for the reproducibility of your research project's core analysis.
+-   **Security for Sensitive Data**: Store all sensitive and confidential information within this folder to prevent accidental public exposure.
+-   **Organization of Temporary Files**: Use this folder for any documents or files that are frequently updated, temporary in nature, or not suitable for the main project history.
+-   **Local Configuration Storage**: Keep any local environment setup files or secrets in this folder to avoid committing them to the shared repository.
+-   **Project Administration**: Centralize internal project management documents here to separate them from the technical project files.
 
-In summary, the `adm` folder may play a crucial role in the project setup by offering a safe and well-organized location for work in progress, temporary documents, sensitive data, local-specific files, and administrative materials, all while maintaining the Git repository clean and concentrated on the elements that are actually important for the research.
+## Additional Resources
+
+While the `Adm` folder is excluded from the TIER Protocol's core reproducibility structure, its use supports good project hygiene. For general project organization principles, refer to the [TIER Protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/).
