@@ -1,6 +1,6 @@
-# Dynamic and Reproducible Research Article Template
+# ARTE: Article Reproducibility Template & Envorinment
 
-[![OSF](https://img.shields.io/badge/OSF-10.17605/OSF.IO/NJDQ5-blue)](https://osf.io/njdq5/) [![GitHub Pages](https://img.shields.io/github/deployments/phdpablo/article-template/github-pages?label=GitHub%20Pages)](https://phdpablo.github.io/article-template/) [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13119679.svg)](https://doi.org/10.5281/zenodo.13119679)
+[![OSF](https://img.shields.io/badge/OSF-10.17605/OSF.IO/NJDQ5-blue)](https://osf.io/njdq5/) [![GitHub Pages](https://img.shields.io/github/deployments/phdpablo/article-template/github-pages?label=GitHub%20Pages)](https://phdpablo.github.io/article-template/) [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10443127.svg)](https://doi.org/10.5281/zenodo.10443127)
 
 This repository provides a template for creating a **dynamic and fully reproducible research article** using **Quarto**, **RStudio**, the **TIER Protocol 4.0**, and **Docker**. It offers a structured project organization, integrates seamlessly with Git/GitHub for version control, and is configured for easy publication on **GitHub Pages** and **OSF**.
 
@@ -8,7 +8,11 @@ The template is designed to meet the **Full Reproducibility** standard by encaps
 
 The image below provides a summary of the repository's folder structure. There is a `README.md` file including an Overview, Contents, Guidelines, and Additional Resources in every TIER 4.0 Protocol folder. Its deployment, which acts as a showcase, provides more details: <https://phdpablo.github.io/article-template/>.
 
-![TIER Protocol 4.0: Quarto Reproducible Dynamic Template](Output/tier-folders.jpg)
+![ARTE workflow folder structure](Output/arte-folders.jpg)
+
+Prior to beginning this guide, you should also review the script shown in the accompanying figure, which is easier to understand after reading the following:  <https://phdpablo.github.io/article-template/02-background.html>
+
+![Roadmap for ARTE workflow](Output/roadmap2.jpg)
 
 ## Table of Contents
 
@@ -28,15 +32,15 @@ The image below provides a summary of the repository's folder structure. There i
 
 ## Features
 
--   **TIER Protocol 4.0 Structure:** Organized folder structure (`Data/`, `Scripts/`, `Output/`) aligned with the TIER Protocol for clear reproducibility.
--   **Quarto Book Project:** Utilizes Quarto's powerful book format for creating rich, dynamic documents integrating text, code (R), and outputs.
--   **RStudio Integration:** Pre-configured for use within the RStudio IDE.
--   **Version Control Ready:** Integrated with Git/GitHub for tracking changes.
--   **Environment Control (Full Reproducibility):** Uses **Docker** to containerize the entire computational environment (R 4.5.1, RStudio, Quarto, LaTeX) and **renv** for precise R package management.
+-   **TIER Protocol 4.0 Structure:** Organized folder structure (`Data/`, `Scripts/`, `Output/`) aligned with the [TIER Protocol](https://www.projecttier.org/tier-protocol/protocol-4-0/) for clear reproducibility.
+-   **Quarto Book Project:** Utilizes [Quarto's powerful book format](https://quarto.org/docs/books/) for creating rich, dynamic documents integrating text, code (R), and outputs.
+-   **RStudio Integration:** Pre-configured for use within the [RStudio IDE](https://posit.co/download/rstudio-desktop/).
+-   **Version Control Ready:** Integrated with [Git/GitHub](https://git-scm.com/) for tracking changes.
+-   **Environment Control (Full Reproducibility):** Uses [**Docker**](https://www.docker.com/) to containerize the entire computational environment (R 4.5.1, RStudio, Quarto, LaTeX) and [**renv**](https://rstudio.github.io/renv/) for precise R package management.
 -   **Persistent Data & Settings:** Project files, installed R packages, and RStudio configurations persist between container sessions.
 -   **Automated Cleanup:** Includes a script (`render_cleanup.R`) to tidy up temporary files after rendering.
--   **Easy Deployment:** Configured for publication on GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`).
--   **Sharing Platform:** Designed for sharing on the Open Science Framework (OSF).
+-   **Easy Deployment:** Configured for publication on GitHub Pages (gh-page branch) via GitHub Actions (`.github/workflows/deploy.yml`).
+-   **Sharing Platform:** Designed for sharing on the [Open Science Framework (OSF)](https://osf.io/).
 
 ## Prerequisites
 
@@ -47,7 +51,7 @@ Before using this template for **Full Reproducibility**, ensure you have the fol
 
 > **Note for Users with Lower Computational Literacy:** This template aims to simplify the process. The core requirement is having Docker installed and running. The provided scripts handle the rest.
 
-## Quick Start (Using Docker - Recommended) {#quick-start-using-docker---recommended}
+## Quick Start
 
 This method uses the pre-configured Docker setup for the easiest and most reproducible experience.
 
@@ -64,7 +68,7 @@ This method uses the pre-configured Docker setup for the easiest and most reprod
     -   **macOS/Linux:** Run `./start.sh` (you might need `chmod +x start.sh` first).
     -   This script automatically finds an available port, builds the Docker image (if needed), starts a container with the name of the folder you cloned/downloaded, and opens RStudio in your browser.
 4.  **Access RStudio:**
-    -   Your browser should automatically open RStudio at `http://ip_host:8787`. If not, go to your browser.
+    -   Your browser should automatically open RStudio at `http://127.0.0.x:8787`. If not, go to your browser.
     -   You are logged in automatically as the `rstudio` user.
     -   Your project files are located in `/home/rstudio/project`.
 5.  **Start Working:**
@@ -91,7 +95,7 @@ If you prefer manual control or want to understand the process:
 
 ## Accessing the RStudio Environment
 
--   **URL:** `http://ip_host:8787` (The `start` scripts automatically open this).
+-   **URL:** `http://127.0.0.x:8787` (The `start` scripts automatically open this).
 -   **Authentication:** No login required (`DISABLE_AUTH=true`).
 -   **User:** You are logged in as the `rstudio` user.
 -   **Project Location (in Container):** `/home/rstudio/project` (This is your local project folder mounted inside the container).
@@ -118,7 +122,7 @@ If you prefer manual control or want to understand the process:
 -   **LaTeX/TinyTeX:** Essential LaTeX packages (`amsfonts`, `unicode-math`, `booktabs`, `caption`, `float`) are pre-installed in the Docker image.
 -   **Data Persistence:** Your project directory (`..` relative to `docker/`) is mounted to `/home/rstudio/project`.
 -   **RStudio Settings Persistence:** RStudio configuration (`.config`, `.local`, `.rstudio`, `.R`) is stored in `docker/cache/` and mounted into the container, preserving your layout and preferences per project.
--   **Port Management:** The `start` scripts automatically find an open port starting from 8787.
+-   **Port Management:** The `start` scripts automatically find an open port starting from `127.0.0.1:8787`.
 
 ## Useful Commands
 
@@ -178,6 +182,10 @@ This template is configured for easy publication on GitHub Pages using GitHub Ac
 
 If you use this template, please cite it as:
 
+Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. *BAR - Brazilian Administration Review*, *22*(3),
+
+We also recommend reading:
+
 Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Second Act. *BAR - Brazilian Administration Review*, *22*(2), e250116. <https://doi.org/10.1590/1807-7692bar2025250116>
 
 Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - First Act. *BAR - Brazilian Administration Review*, *22*(1), e250079. <https://doi.org/10.1590/1807-7692bar2025250079>
@@ -185,7 +193,3 @@ Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Pract
 ## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License - see the [LICENSE](LICENSE) file for details.
-
-------------------------------------------------------------------------
-
-This template integrates tools recommended by the [TIER Protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/) for reproducible research.

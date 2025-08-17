@@ -10,11 +10,13 @@ Make sure to look into the thought of reproducible research practice [@sullivan2
 
 **Understanding Reproducibility Levels:**
 
-The template is designed to support different levels of reproducibility, as illustrated in the project's Zenodo record:
+The template is designed to support different levels of reproducibility, as illustrated in the @fig-roadmap. The levels are:
 
 -   **Minimal Reproducibility:** Using the template structure, editing READMEs, and sharing on OSF.
 -   **Proper Reproducibility:** Adding Quarto narrative (with RStudio and Git/Github) development and using `renv` for R package management.
 -   **Full Reproducibility (This Template's Strength):** Incorporating Docker to containerize the entire computational environment, ensuring maximum consistency and ease of replication. This is achieved using the files in the `docker/` folder.
+
+[![Roadmap for Developing a Dynamic and Reproducible Research Article with ARTE workflow. Illustration available at: https://doi.org/10.5281/zenodo.16883797](Output/roadmap1.jpg){#fig-roadmap width="100%"}](https://doi.org/10.5281/zenodo.16883797)
 
 **The Role of Dynamic Documents:**
 

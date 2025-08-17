@@ -2,7 +2,7 @@
 
 <br>
 
-This section introduces the **TIER Protocol 4.0 Dynamic Template**. This is not an introduction to a research topic, but rather an explanation of the template's purpose and structure.
+This section introduces the **ARTE: Article Reproducibility Template & Environment**. This is not an introduction to a research topic, but rather an explanation of the template's purpose and structure.
 
 This template is designed for researchers, particularly in the applied social sciences, who want to create **dynamic and reproducible research articles**. It aims to make the principles of reproducible research more accessible by providing a pre-structured project environment.
 
@@ -23,9 +23,9 @@ The template integrates several key tools and practices:
 
 This example document demonstrates how these components work together. Gain some additional knowledge regarding Open Science and Reproducible Research [@klein2018; @kathawalla2021; @limongi2025a; @limongi2025b].
 
-This is an example of how to integrate an external document into your article (@fig-tier-folders), showcasing the TIER Protocol 4.0 folder structure.
+This is an example of how to integrate an external document into your article (@fig-arte-folders), showcasing the TIER Protocol 4.0 folder structure.
 
-[![TIER Protocol 4.0: Quarto Reproducible Dynamic Template. Illustration available at: https://doi.org/10.5281/zenodo.16748763](Output/tier-folders.jpg){#fig-tier-folders width="100%"}](https://doi.org/10.5281/zenodo.13119617)
+[![ARTE (Article Reproducibility Template & Environment) workflow folder structure. Illustration available at: https://doi.org/10.5281/zenodo.16748763](Output/arte-folders.jpg){#fig-arte-folders width="100%"}](https://doi.org/10.5281/zenodo.16748763)
 
 For more details about **TIER Protocol 4.0**, visit the page: <https://www.projecttier.org/> and/or read the @domingos2021 article.
 

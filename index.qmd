@@ -2,15 +2,23 @@
 
 <br>
 
-This document is a deployment of the **TIER Protocol 4.0: Dynamic Template**. It serves as an example of how the template can be used and showcases its features. This template provides a structured framework for creating **dynamic and fully reproducible research articles** using **Quarto**, integrated with **RStudio**, **Git/GitHub**, and designed for sharing on platforms like **OSF** and **GitHub Pages**.
+This document is a deployment of the **ARTE: Article Reproducibility Template & Environment**. It serves as an example of how the template can be used and showcases its features. This template provides a structured framework for creating **dynamic and fully reproducible research articles** using [**Quarto**](https://quarto.org), integrated with [**RStudio**](https://posit.co/download/rstudio-desktop/), [**Git/GitHub**](https://git-scm.com/), and designed for sharing on platforms like [**OSF**](https://osf.io/) and [**GitHub Pages**](https://docs.github.com/pages).
 
-The template is organized according to the **TIER Protocol 4.0**, ensuring clarity and reproducibility. It is pre-configured for **environment management** using `renv` and **Docker**, guaranteeing that the computational environment is consistent and reproducible. This example demonstrates the integration of narrative text, executable R code, and outputs (like tables and figures) within a single, cohesive document.
+The template is organized according to the [**TIER Protocol 4.0**](https://www.projecttier.org/tier-protocol/protocol-4-0/), ensuring clarity and reproducibility. It is pre-configured for environment management using [**renv**](https://rstudio.github.io/renv/) and [**Docker**](https://www.docker.com/), guaranteeing that the computational environment is consistent and reproducible. This example demonstrates the integration of narrative text, executable R code, and outputs (like tables and figures) within a single, cohesive document.
 
-This deployment illustrates the project structure and the use of Quarto's book format. It is not a research article on a specific topic but a guide on how to use the template itself.
+This deployment illustrates the project structure and the use of [**Quarto's book format**](https://quarto.org/docs/books/). It is not a research article on a specific topic but a guide on how to use the template itself.
 
-**Key-words:** Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv, Docker, GitHub Pages.
+**Key-words:** Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv package, Docker, GitHub Pages.
+
+<br>
 
 **How cite this template?**
+
+Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. *BAR - Brazilian Administration Review*, *22*(3),
+
+<br>
+
+**We also recommend reading:**
 
 Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Second Act. *BAR - Brazilian Administration Review*, *22*(2), e250116. <https://doi.org/10.1590/1807-7692bar2025250116>
 

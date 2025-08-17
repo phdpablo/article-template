@@ -14,10 +14,10 @@ resources: # https://quarto.org/docs/projects/quarto-projects.html#project-resou
 execute: # https://quarto.org/docs/computations/execution-options.html
   warning: false # Prevent R code chunk warnings from appearing in the output.
 book: # https://quarto.org/docs/books/index.html
-  title: "TIER Dynamic Template" # edit your title
-  subtitle: "Roadmap for Developing a Dynamic and Reproducible Research Article" # edit your subtitle
+  title: "ARTE" # edit your title
+  subtitle: "Article Reproducibility Template & Environment" # edit your subtitle
   author: "Pablo Rogers and Ricardo Limongi" # edit your name
-  date: 08/05/2025 # https://quarto.org/docs/reference/dates.html
+  date: 08/17/2025 # https://quarto.org/docs/reference/dates.html
   date-format: long # Format for displaying the date (e.g., "August 8, 2024").
   doi: 10.17605/OSF.IO/NJDQ5 # put your DOI
   cover-image: cover.png # edit ou exclude this image
@@ -51,6 +51,7 @@ book: # https://quarto.org/docs/books/index.html
 bibliography: references.bib # https://quarto.org/docs/authoring/citations.html
 # File containing the bibliographic references in BibTeX format.
 csl: apa7ed.csl # Citation Style Language file defining the citation format (APA 7th ed.).
+# See others at https://www.zotero.org/styles
 
 format: # https://quarto.org/docs/reference/formats/html.html
   html: # Configuration for HTML output format.
