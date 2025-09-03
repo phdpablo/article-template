@@ -8,25 +8,25 @@ This template is designed for researchers, particularly in the applied social sc
 
 The template integrates several key tools and practices:
 
--   **Quarto Book:** For authoring dynamic documents that seamlessly blend narrative text, executable code (R), and the resulting outputs (tables, figures). *This document you are reading is an example of a Quarto book*.
+-   [**Quarto's book:**](https://quarto.org/docs/books/) For authoring dynamic documents that seamlessly blend narrative text, executable code (R), and the resulting outputs (tables, figures). *This document you are reading is an example of a Quarto book*.
 
--   **TIER Protocol 4.0:** Provides a standardized folder structure (`Data/`, `Scripts/`, `Output/`) to organize your project logically and transparently, making it easier for others (and your future self) to understand and reproduce your work.
+-   [**TIER Protocol 4.0:**](https://www.projecttier.org/tier-protocol/protocol-4-0/) Provides a standardized folder structure (`Data/`, `Scripts/`, `Output/`) to organize your project logically and transparently, making it easier for others (and your future self) to understand and reproduce your work.
 
--   **Git/GitHub:** Built-in version control allows you to track changes to your project over time, facilitating collaboration and providing a history of your work.
+-   [**Git/GitHub:**](https://github.com/) Built-in version control allows you to track changes to your project over time, facilitating collaboration and providing a history of your work.
 
--   **Environment Control:** The template supports three levels of environment management:
+-   [**Environment Control:**](https://doi.org/10.5281/zenodo.16883797) The template supports three levels of environment management:
 
     -   **Proper Reproducibility:** Using the R `renv` package to snapshot and restore specific versions of R packages.
     -   **Full Reproducibility (Recommended):** Using **Docker** (see `docker/` folder) to containerize the entire computational environment (R, RStudio, Quarto, packages, LaTeX). This ensures that your project runs identically on any machine with Docker installed, eliminating "it works on my machine" issues.
 
--   **Easy Sharing:** Pre-configured for publishing your dynamic article to **GitHub Pages** using GitHub Actions (`.github/workflows/deploy.yml`) and designed for sharing on the **Open Science Framework (OSF)**.
+-   [**GitHub Pages:**](https://pages.github.com/) Pre-configured for publishing your dynamic article using GitHub Actions (`.github/workflows/deploy.yml`) and designed for sharing on the [**Open Science Framework (OSF)**](https://osf.io/).
 
-This example document demonstrates how these components work together. Gain some additional knowledge regarding Open Science and Reproducible Research [@klein2018; @kathawalla2021; @limongi2025a; @limongi2025b].
+This example document demonstrates how these components work together. Gain some additional knowledge regarding Open Science and Reproducible Research [@klein2018; @kathawalla2021; @limongi2025a; @limongi2025b; @rogers2025].
 
-This is an example of how to integrate an external document into your article (@fig-arte-folders), showcasing the TIER Protocol 4.0 folder structure.
+This is an example of how to integrate an external document into your article (@fig-arte-folders), showcasing the [**TIER Protocol 4.0**](https://www.projecttier.org/tier-protocol/protocol-4-0/) folder structure.
 
 [![ARTE (Article Reproducibility Template & Environment) workflow folder structure. Illustration available at: https://doi.org/10.5281/zenodo.16748763](Output/arte-folders.jpg){#fig-arte-folders width="100%"}](https://doi.org/10.5281/zenodo.16748763)
 
 For more details about **TIER Protocol 4.0**, visit the page: <https://www.projecttier.org/> and/or read the @domingos2021 article.
 
-Read the README files for the [project root](https://github.com/phdpablo/article-template/) and explore the repository structure [on GitHub](https://github.com/phdpablo/article-template) to learn more about how this protocol works with this template.
+Read the README files for the [project root](https://github.com/phdpablo/article-template/) and explore the repository structure to learn more about how this protocol works with this template.

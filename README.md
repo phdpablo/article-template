@@ -10,7 +10,7 @@ The image below provides a summary of the repository's folder structure. There i
 
 ![ARTE workflow folder structure](Output/arte-folders.jpg)
 
-Prior to beginning this guide, you should also review the script shown in the accompanying figure, which is easier to understand after reading the following:  <https://phdpablo.github.io/article-template/02-background.html>
+Prior to beginning this guide, you should also review the script shown in the accompanying figure, which is easier to understand after reading the following: <https://phdpablo.github.io/article-template/02-background.html>
 
 ![Roadmap for ARTE workflow](Output/roadmap2.jpg)
 
@@ -182,7 +182,23 @@ This template is configured for easy publication on GitHub Pages using GitHub Ac
 
 If you use this template, please cite it as:
 
-Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. *BAR - Brazilian Administration Review*, *22*(3),
+Rogers, P., & Limongi, R. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. *BAR - Brazilian Administration Review*, *22*(3),e250162. <https://doi.org/10.1590/1807-7692bar2025250162>
+
+**BibTex:**
+
+``` r
+@article{rogers2025,
+  title = {Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act},
+  author = {Rogers, Pablo and Limongi, Ricardo},
+  year = {2025},
+  journal = {BAR - Brazilian Administration Review},
+  volume = {22},
+  number = {3},
+  pages = {e250162},
+  issn = {1807-7692},
+  doi = {10.1590/1807-7692bar2025250162},
+}
+```
 
 We also recommend reading:
 

@@ -6,25 +6,25 @@ This section provides background on the concepts of reproducibility and the tool
 
 Reproducible research is a cornerstone of good scientific practice. It ensures that findings are reliable and that the scientific process is transparent. The tools and structure provided by this template are designed to support these principles.
 
-Make sure to look into the thought of reproducible research practice [@sullivan2019; @wilson2017; @vuorre2018; @gilroy2019; @dogucu2022; @wiebels2021; @limongi2025a; @limongi2025b].
+Make sure to look into the thought of reproducible research practice [@sullivan2019; @wilson2017; @vuorre2018; @gilroy2019; @dogucu2022; @wiebels2021; @limongi2025a; @limongi2025b; @rogers2025].
 
-**Understanding Reproducibility Levels:**
+## Reproducibility Levels
 
 The template is designed to support different levels of reproducibility, as illustrated in the @fig-roadmap. The levels are:
 
--   **Minimal Reproducibility:** Using the template structure, editing READMEs, and sharing on OSF.
--   **Proper Reproducibility:** Adding Quarto narrative (with RStudio and Git/Github) development and using `renv` for R package management.
--   **Full Reproducibility (This Template's Strength):** Incorporating Docker to containerize the entire computational environment, ensuring maximum consistency and ease of replication. This is achieved using the files in the `docker/` folder.
+-   **Minimal Reproducibility:** Using the template structure, editing READMEs, and sharing on [OSF](https://osf.io/).
+-   **Proper Reproducibility:** Adding [Quarto](https://quarto.org) narrative (with [RStudio](https://posit.co/download/rstudio-desktop/) and [Git/GitHub](https://github.com/)) development and using [renv package](https://rstudio.github.io/renv/) for R package management.
+-   **Full Reproducibility (This Template's Strength):** Incorporating [Docker](https://www.docker.com/) to containerize the entire computational environment, ensuring maximum consistency and ease of replication. This is achieved using the files in the `docker/` folder.
 
 [![Roadmap for Developing a Dynamic and Reproducible Research Article with ARTE workflow. Illustration available at: https://doi.org/10.5281/zenodo.16883797](Output/roadmap1.jpg){#fig-roadmap width="100%"}](https://doi.org/10.5281/zenodo.16883797)
 
-**The Role of Dynamic Documents:**
+## The Role of Dynamic Documents
 
-Dynamic documents, like the ones created with Quarto (`.qmd` files), play a crucial role. They allow the narrative of your research to be directly linked to the analysis code. When you render the document, the code is executed, and the results (tables, figures, numbers) are automatically inserted into the text. This reduces manual errors and ensures that your narrative always reflects the latest analysis.
+Dynamic documents, like the ones created with [Quarto](https://quarto.org) (`.qmd` files), play a crucial role. They allow the narrative of your research to be directly linked to the analysis code. When you render the document, the code is executed, and the results (tables, figures, numbers) are automatically inserted into the text. This reduces manual errors and ensures that your narrative always reflects the latest analysis.
 
-**TIER Protocol 4.0 Structure:**
+## TIER Protocol 4.0 Structure
 
-The folder structure adheres to the TIER Protocol 4.0:
+The folder structure adheres to the [TIER Protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/):
 
 -   **`Data/`**: Stores raw, intermediate, and final data files.
 -   **`Scripts/`**: Contains R scripts for data processing, analysis, and visualization. Complex analyses are best kept here.

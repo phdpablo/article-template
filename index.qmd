@@ -8,13 +8,32 @@ The template is organized according to the [**TIER Protocol 4.0**](https://www.p
 
 This deployment illustrates the project structure and the use of [**Quarto's book format**](https://quarto.org/docs/books/). It is not a research article on a specific topic but a guide on how to use the template itself.
 
-**Key-words:** Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv package, Docker, GitHub Pages.
+**Key-words:** Open Science, Reproducibility, [Quarto](https://quarto.org), [TIER Protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/), [R language](https://cran.r-project.org/), [RStudio](https://posit.co/download/rstudio-desktop/), [Git](https://git-scm.com/), [GitHub](https://github.com/), [renv package](https://rstudio.github.io/renv/), [Docker](https://www.docker.com/), [GitHub Pages](https://pages.github.com/), [OSF](https://osf.io/).
 
 <br>
 
 **How cite this template?**
 
-Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. *BAR - Brazilian Administration Review*, *22*(3),
+Rogers, P., & Limongi, R. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. *BAR - Brazilian Administration Review*, *22*(3),e250162. <https://doi.org/10.1590/1807-7692bar2025250162>
+
+::: {.content-visible unless-format="pdf"}
+
+**BibTex:**
+
+``` r
+@article{rogers2025,
+  title = {Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act},
+  author = {Rogers, Pablo and Limongi, Ricardo},
+  year = {2025},
+  journal = {BAR - Brazilian Administration Review},
+  volume = {22},
+  number = {3},
+  pages = {e250162},
+  issn = {1807-7692},
+  doi = {10.1590/1807-7692bar2025250162},
+}
+```
+:::
 
 <br>
 
