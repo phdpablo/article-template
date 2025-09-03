@@ -52,6 +52,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./03-methods.html" rel="next">
 <link href="./01-intro.html" rel="prev">
+<link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,8 +62,8 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9efe7b9a94af125cac77e404f8d58252.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c7e6d5637270657084b4f6d24548e230.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6caf7ae2e70015a08558cbc7735c4e5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-74dfd587a663655ed536814225b0bc6c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -90,6 +91,15 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2MWSHLX73Q"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2MWSHLX73Q', { 'anonymize_ip': true});
+</script>
 
 
 <meta property="og:title" content="2&nbsp; Background – ARTE">
@@ -212,8 +222,16 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#reproducibility-levels" id="toc-reproducibility-levels" class="nav-link active" data-scroll-target="#reproducibility-levels"><span class="header-section-number">2.1</span> Reproducibility Levels</a></li>
+  <li><a href="#the-role-of-dynamic-documents" id="toc-the-role-of-dynamic-documents" class="nav-link" data-scroll-target="#the-role-of-dynamic-documents"><span class="header-section-number">2.2</span> The Role of Dynamic Documents</a></li>
+  <li><a href="#tier-protocol-4.0-structure" id="toc-tier-protocol-4.0-structure" class="nav-link" data-scroll-target="#tier-protocol-4.0-structure"><span class="header-section-number">2.3</span> TIER Protocol 4.0 Structure</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Background</span></h1></header>
@@ -227,13 +245,14 @@ div.csl-indent {
 <p><br></p>
 <p>This section provides background on the concepts of reproducibility and the tools integrated into this template.</p>
 <p>Reproducible research is a cornerstone of good scientific practice. It ensures that findings are reliable and that the scientific process is transparent. The tools and structure provided by this template are designed to support these principles.</p>
-<p>Make sure to look into the thought of reproducible research practice <span class="citation" data-cites="sullivan2019 wilson2017 vuorre2018 gilroy2019 dogucu2022 wiebels2021 limongi2025a limongi2025b">(<a href="references.html#ref-dogucu2022" role="doc-biblioref">Dogucu &amp; Çetinkaya-Rundel, 2022</a>; <a href="references.html#ref-gilroy2019" role="doc-biblioref">Gilroy &amp; Kaplan, 2019</a>; <a href="references.html#ref-limongi2025a" role="doc-biblioref">Limongi &amp; Rogers, 2025a</a>, <a href="references.html#ref-limongi2025b" role="doc-biblioref">2025b</a>; <a href="references.html#ref-sullivan2019" role="doc-biblioref">Sullivan et al., 2019</a>; <a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre &amp; Curley, 2018</a>; <a href="references.html#ref-wiebels2021" role="doc-biblioref">Wiebels &amp; Moreau, 2021</a>; <a href="references.html#ref-wilson2017" role="doc-biblioref">Wilson et al., 2017</a>)</span>.</p>
-<p><strong>Understanding Reproducibility Levels:</strong></p>
+<p>Make sure to look into the thought of reproducible research practice <span class="citation" data-cites="sullivan2019 wilson2017 vuorre2018 gilroy2019 dogucu2022 wiebels2021 limongi2025a limongi2025b rogers2025">(<a href="references.html#ref-dogucu2022" role="doc-biblioref">Dogucu &amp; Çetinkaya-Rundel, 2022</a>; <a href="references.html#ref-gilroy2019" role="doc-biblioref">Gilroy &amp; Kaplan, 2019</a>; <a href="references.html#ref-limongi2025a" role="doc-biblioref">Limongi &amp; Rogers, 2025a</a>, <a href="references.html#ref-limongi2025b" role="doc-biblioref">2025b</a>; <a href="references.html#ref-rogers2025" role="doc-biblioref">Rogers &amp; Limongi, 2025</a>; <a href="references.html#ref-sullivan2019" role="doc-biblioref">Sullivan et al., 2019</a>; <a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre &amp; Curley, 2018</a>; <a href="references.html#ref-wiebels2021" role="doc-biblioref">Wiebels &amp; Moreau, 2021</a>; <a href="references.html#ref-wilson2017" role="doc-biblioref">Wilson et al., 2017</a>)</span>.</p>
+<section id="reproducibility-levels" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="reproducibility-levels"><span class="header-section-number">2.1</span> Reproducibility Levels</h2>
 <p>The template is designed to support different levels of reproducibility, as illustrated in the <a href="#fig-roadmap" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>. The levels are:</p>
 <ul>
-<li><strong>Minimal Reproducibility:</strong> Using the template structure, editing READMEs, and sharing on OSF.</li>
-<li><strong>Proper Reproducibility:</strong> Adding Quarto narrative (with RStudio and Git/Github) development and using <code>renv</code> for R package management.</li>
-<li><strong>Full Reproducibility (This Template’s Strength):</strong> Incorporating Docker to containerize the entire computational environment, ensuring maximum consistency and ease of replication. This is achieved using the files in the <code>docker/</code> folder.</li>
+<li><strong>Minimal Reproducibility:</strong> Using the template structure, editing READMEs, and sharing on <a href="https://osf.io/">OSF</a>.</li>
+<li><strong>Proper Reproducibility:</strong> Adding <a href="https://quarto.org">Quarto</a> narrative (with <a href="https://posit.co/download/rstudio-desktop/">RStudio</a> and <a href="https://github.com/">Git/GitHub</a>) development and using <a href="https://rstudio.github.io/renv/">renv package</a> for R package management.</li>
+<li><strong>Full Reproducibility (This Template’s Strength):</strong> Incorporating <a href="https://www.docker.com/">Docker</a> to containerize the entire computational environment, ensuring maximum consistency and ease of replication. This is achieved using the files in the <code>docker/</code> folder.</li>
 </ul>
 <div id="fig-roadmap" class="quarto-float quarto-figure quarto-figure-left anchored" width="100%">
 <figure class="quarto-float quarto-float-fig figure">
@@ -245,10 +264,14 @@ Figure&nbsp;2.1: Roadmap for Developing a Dynamic and Reproducible Research Arti
 </figcaption>
 </figure>
 </div>
-<p><strong>The Role of Dynamic Documents:</strong></p>
-<p>Dynamic documents, like the ones created with Quarto (<code>.qmd</code> files), play a crucial role. They allow the narrative of your research to be directly linked to the analysis code. When you render the document, the code is executed, and the results (tables, figures, numbers) are automatically inserted into the text. This reduces manual errors and ensures that your narrative always reflects the latest analysis.</p>
-<p><strong>TIER Protocol 4.0 Structure:</strong></p>
-<p>The folder structure adheres to the TIER Protocol 4.0:</p>
+</section>
+<section id="the-role-of-dynamic-documents" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="the-role-of-dynamic-documents"><span class="header-section-number">2.2</span> The Role of Dynamic Documents</h2>
+<p>Dynamic documents, like the ones created with <a href="https://quarto.org">Quarto</a> (<code>.qmd</code> files), play a crucial role. They allow the narrative of your research to be directly linked to the analysis code. When you render the document, the code is executed, and the results (tables, figures, numbers) are automatically inserted into the text. This reduces manual errors and ensures that your narrative always reflects the latest analysis.</p>
+</section>
+<section id="tier-protocol-4.0-structure" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="tier-protocol-4.0-structure"><span class="header-section-number">2.3</span> TIER Protocol 4.0 Structure</h2>
+<p>The folder structure adheres to the <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/">TIER Protocol 4.0</a>:</p>
 <ul>
 <li><strong><code>Data/</code></strong>: Stores raw, intermediate, and final data files.</li>
 <li><strong><code>Scripts/</code></strong>: Contains R scripts for data processing, analysis, and visualization. Complex analyses are best kept here.</li>
@@ -272,6 +295,9 @@ Limongi, R., &amp; Rogers, P. (2025a). Open <span>Science</span> in <span>Three 
 <div id="ref-limongi2025b" class="csl-entry" role="listitem">
 Limongi, R., &amp; Rogers, P. (2025b). Open <span>Science</span> in <span>Three Acts</span>: <span>Foundations</span>, <span>Practice</span>, and <span>Implementation</span> - <span>Second Act</span>. <em>BAR - Brazilian Administration Review</em>, <em>22</em>(2), e250116. <a href="https://doi.org/10.1590/1807-7692bar2025250116">https://doi.org/10.1590/1807-7692bar2025250116</a>
 </div>
+<div id="ref-rogers2025" class="csl-entry" role="listitem">
+Rogers, P., &amp; Limongi, R. (2025). Open <span>Science</span> in <span>Three Acts</span>: <span>Foundations</span>, <span>Practice</span>, and <span>Implementation</span> - <span>Third Act</span>. <em>BAR - Brazilian Administration Review</em>, <em>22</em>(3), e250162. <a href="https://doi.org/10.1590/1807-7692bar2025250162">https://doi.org/10.1590/1807-7692bar2025250162</a>
+</div>
 <div id="ref-sullivan2019" class="csl-entry" role="listitem">
 Sullivan, I., DeHaven, A., &amp; Mellor, D. (2019). Open and Reproducible Research on Open Science Framework. <em>Current Protocols Essential Laboratory Techniques</em>, <em>18</em>(1), e32. <a href="https://doi.org/10.1002/cpet.32">https://doi.org/10.1002/cpet.32</a>
 </div>
@@ -285,6 +311,7 @@ Wiebels, K., &amp; Moreau, D. (2021). Leveraging Containers for Reproducible Psy
 Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., &amp; Teal, T. K. (2017). Good enough practices in scientific computing. <em>PLOS Computational Biology</em>, <em>13</em>(6), e1005510. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

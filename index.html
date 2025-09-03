@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Pablo Rogers and Ricardo Limongi">
-<meta name="dcterms.date" content="2025-08-17">
+<meta name="dcterms.date" content="2025-09-03">
 
 <title>ARTE</title>
 <style>
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,6 +67,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./01-intro.html" rel="next">
+<link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -42,8 +77,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9efe7b9a94af125cac77e404f8d58252.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c7e6d5637270657084b4f6d24548e230.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6caf7ae2e70015a08558cbc7735c4e5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-74dfd587a663655ed536814225b0bc6c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,14 +106,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2MWSHLX73Q"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2MWSHLX73Q', { 'anonymize_ip': true});
+</script>
 
 
 <meta property="og:title" content="ARTE">
 <meta property="og:description" content="Article Reproducibility Template &amp; Environment">
-<meta property="og:image" content="https://phdpablo.github.io/article-template/cover.png">
+<meta property="og:image" content="https://phdpablo.github.io/article-template/cover.jpg">
 <meta property="og:site_name" content="ARTE">
-<meta property="og:image:height" content="566">
-<meta property="og:image:width" content="400">
 </head>
 
 <body class="nav-sidebar floating fullcontent">
@@ -204,21 +246,33 @@ ul.task-list li input[type="checkbox"] {
 <p class="subtitle lead">Article Reproducibility Template &amp; Environment</p>
 <p class="author">Pablo Rogers and Ricardo Limongi</p>
 
-<p class="date">August 17, 2025</p>
+<p class="date">September 3, 2025</p>
 </header>
 
 
 
 <section id="abstract" class="level1 unnumbered unlisted">
-<h1 class="unnumbered unlisted">Abstract</h1><p><img src="cover.png" title="ARTE" class="quarto-cover-image img-fluid"></p>
+<h1 class="unnumbered unlisted">Abstract</h1><p><img src="cover.jpg" title="ARTE" class="quarto-cover-image img-fluid"></p>
 <p><br></p>
 <p>This document is a deployment of the <strong>ARTE: Article Reproducibility Template &amp; Environment</strong>. It serves as an example of how the template can be used and showcases its features. This template provides a structured framework for creating <strong>dynamic and fully reproducible research articles</strong> using <a href="https://quarto.org"><strong>Quarto</strong></a>, integrated with <a href="https://posit.co/download/rstudio-desktop/"><strong>RStudio</strong></a>, <a href="https://git-scm.com/"><strong>Git/GitHub</strong></a>, and designed for sharing on platforms like <a href="https://osf.io/"><strong>OSF</strong></a> and <a href="https://docs.github.com/pages"><strong>GitHub Pages</strong></a>.</p>
 <p>The template is organized according to the <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/"><strong>TIER Protocol 4.0</strong></a>, ensuring clarity and reproducibility. It is pre-configured for environment management using <a href="https://rstudio.github.io/renv/"><strong>renv</strong></a> and <a href="https://www.docker.com/"><strong>Docker</strong></a>, guaranteeing that the computational environment is consistent and reproducible. This example demonstrates the integration of narrative text, executable R code, and outputs (like tables and figures) within a single, cohesive document.</p>
 <p>This deployment illustrates the project structure and the use of <a href="https://quarto.org/docs/books/"><strong>Quarto’s book format</strong></a>. It is not a research article on a specific topic but a guide on how to use the template itself.</p>
-<p><strong>Key-words:</strong> Open Science, Reproducibility, Quarto, TIER Protocol 4.0, R language, RStudio, Git, GitHub, renv package, Docker, GitHub Pages.</p>
+<p><strong>Key-words:</strong> Open Science, Reproducibility, <a href="https://quarto.org">Quarto</a>, <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/">TIER Protocol 4.0</a>, <a href="https://cran.r-project.org/">R language</a>, <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>, <a href="https://git-scm.com/">Git</a>, <a href="https://github.com/">GitHub</a>, <a href="https://rstudio.github.io/renv/">renv package</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://pages.github.com/">GitHub Pages</a>, <a href="https://osf.io/">OSF</a>.</p>
 <p><br></p>
 <p><strong>How cite this template?</strong></p>
-<p>Limongi, R., &amp; Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. <em>BAR - Brazilian Administration Review</em>, <em>22</em>(3),</p>
+<p>Rogers, P., &amp; Limongi, R. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. <em>BAR - Brazilian Administration Review</em>, <em>22</em>(3),e250162. <a href="https://doi.org/10.1590/1807-7692bar2025250162" class="uri">https://doi.org/10.1590/1807-7692bar2025250162</a></p>
+<p><strong>BibTex:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">@</span>article{rogers2025,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  title <span class="ot">=</span> {Open Science <span class="cf">in</span> Three Acts<span class="sc">:</span> Foundations, Practice, and Implementation <span class="sc">-</span> Third Act},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  author <span class="ot">=</span> {Rogers, Pablo and Limongi, Ricardo},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  year <span class="ot">=</span> {<span class="dv">2025</span>},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  journal <span class="ot">=</span> {BAR <span class="sc">-</span> Brazilian Administration Review},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  volume <span class="ot">=</span> {<span class="dv">22</span>},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  number <span class="ot">=</span> {<span class="dv">3</span>},</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  pages <span class="ot">=</span> {e250162},</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  issn <span class="ot">=</span> {<span class="dv">1807-7692</span>},</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  doi <span class="ot">=</span> {<span class="fl">10.1590</span><span class="sc">/</span><span class="dv">1807-7692</span>bar2025250162},</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 <p><strong>We also recommend reading:</strong></p>
 <p>Limongi, R., &amp; Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Second Act. <em>BAR - Brazilian Administration Review</em>, <em>22</em>(2), e250116. <a href="https://doi.org/10.1590/1807-7692bar2025250116" class="uri">https://doi.org/10.1590/1807-7692bar2025250116</a></p>

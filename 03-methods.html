@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./04-results.html" rel="next">
 <link href="./02-background.html" rel="prev">
+<link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,8 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9efe7b9a94af125cac77e404f8d58252.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c7e6d5637270657084b4f6d24548e230.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6caf7ae2e70015a08558cbc7735c4e5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-74dfd587a663655ed536814225b0bc6c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,6 +71,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2MWSHLX73Q"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2MWSHLX73Q', { 'anonymize_ip': true});
+</script>
 
 
 <meta property="og:title" content="3&nbsp; Methods – ARTE">
@@ -191,8 +201,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#core-technologies" id="toc-core-technologies" class="nav-link active" data-scroll-target="#core-technologies"><span class="header-section-number">3.1</span> Core Technologies</a></li>
+  <li><a href="#workflow-integration" id="toc-workflow-integration" class="nav-link" data-scroll-target="#workflow-integration"><span class="header-section-number">3.2</span> Workflow Integration</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></h1></header>
@@ -206,34 +223,37 @@ ul.task-list li input[type="checkbox"] {
 <p><br></p>
 <p>This section describes the tools and methods used to create and utilize this template.</p>
 <p>This template itself is the “method”. It prescribes a specific way to organize and execute a reproducible research project.</p>
-<p><strong>Core Technologies:</strong></p>
+<section id="core-technologies" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="core-technologies"><span class="header-section-number">3.1</span> Core Technologies</h2>
 <ol type="1">
-<li><strong>Quarto:</strong> The primary authoring tool. It uses Markdown syntax for text and integrates executable code chunks (primarily R, but also Python, Julia, etc.). Key features used:
+<li><a href="(https://quarto.org)"><strong>Quarto:</strong></a> The primary authoring tool. It uses Markdown syntax for text and integrates executable code chunks (primarily R, but also Python, Julia, etc.). Key features used:
 <ul>
 <li><strong>Book Format:</strong> Organizes the article into chapters/sections.</li>
 <li><strong>Code Chunks:</strong> Embed R code directly (<code>{r}</code>) for analysis and visualization.</li>
 <li><strong>Citations:</strong> Managed via <code>references.bib</code> (BibTeX) and formatted using <code>apa7ed.csl</code>. You can use <a href="https://www.zotero.org/">Zotero</a> in RStudio for this.</li>
 <li><strong>Embedding Outputs:</strong> Results from scripts in <code>Scripts/</code> can be embedded into the narrative using <code>{{&lt; embed &gt;}}</code> (see Results section).</li>
 </ul></li>
-<li><strong>R &amp; RStudio:</strong> The computational engine and integrated development environment (IDE). R/RStudio is used for statistical analysis, data manipulation, and creating visualizations within Quarto documents.</li>
+<li><a href="https://posit.co/download/rstudio-desktop/"><strong>R &amp; RStudio:</strong></a> The computational engine and integrated development environment (IDE). R/RStudio is used for statistical analysis, data manipulation, and creating visualizations within Quarto documents.</li>
 <li><strong>Git &amp; GitHub:</strong>
 <ul>
-<li><strong>Git:</strong> Provides version control locally. Every significant change to your project files is tracked.</li>
-<li><strong>GitHub:</strong> Hosts the repository online, enabling collaboration, sharing, backup, and to publish the dynamic document (Github Pages). It also integrates with GitHub Actions.</li>
+<li><a href="https://git-scm.com/"><strong>Git:</strong></a> Provides version control locally. Every significant change to your project files is tracked.</li>
+<li><a href="https://github.com/"><strong>GitHub:</strong></a> Hosts the repository online, enabling collaboration, sharing, backup, and to publish the dynamic document (Github Pages). It also integrates with GitHub Actions.</li>
 </ul></li>
 <li><strong>Environment Management:</strong>
 <ul>
-<li><strong>renv:</strong> (Proper Reproducibility) Tracks and restores specific R package versions used in the project. The <code>renv.lock</code> file is the key component.</li>
-<li><strong>Docker:</strong> (Full Reproducibility) Packages the entire software environment (R, RStudio, Quarto, packages, LaTeX) into a container. This guarantees that the environment is identical for anyone running the project. The <code>docker/</code> folder contains the necessary configuration (<code>Dockerfile</code>, <code>docker-compose.yml</code>, <code>start/stop</code> scripts).</li>
+<li><a href="https://rstudio.github.io/renv/"><strong>renv:</strong></a> (Proper Reproducibility) Tracks and restores specific R package versions used in the project. The <code>renv.lock</code> file is the key component.</li>
+<li><a href="https://www.docker.com/"><strong>Docker:</strong></a> (Full Reproducibility) Packages the entire software environment (R, RStudio, Quarto, packages, LaTeX) into a container. This guarantees that the environment is identical for anyone running the project. The <code>docker/</code> folder contains the necessary configuration (<code>Dockerfile</code>, <code>docker-compose.yml</code>, <code>start/stop</code> scripts).</li>
 </ul></li>
 <li><strong>Sharing &amp; Publication:</strong>
 <ul>
-<li><strong>OSF:</strong> A platform for registering, storing, and sharing research materials openly.</li>
-<li><strong>GitHub Pages:</strong> A free service to host the rendered HTML version of your Quarto book/article directly from your GitHub repository. The <code>.github/workflows/deploy.yml</code> file automates this process.</li>
+<li><a href="https://osf.io/"><strong>OSF:</strong></a> A platform for registering, storing, and sharing research materials openly.</li>
+<li><a href="https://pages.github.com/"><strong>GitHub Pages:</strong></a> A free service to host the rendered HTML version of your Quarto book/article directly from your GitHub repository. The <code>.github/workflows/deploy.yml</code> file automates this process.</li>
 </ul></li>
 </ol>
-<p><strong>Workflow Integration:</strong></p>
-<p>If you need to learn a little more about Reproducible Research with R/RStudio, there are excellent free e-books:</p>
+</section>
+<section id="workflow-integration" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="workflow-integration"><span class="header-section-number">3.2</span> Workflow Integration</h2>
+<p>If you need to learn a little more about Reproducible Research with <a href="https://posit.co/download/rstudio-desktop/">R/RStudio</a>, there are excellent free e-books:</p>
 <ul>
 <li><a href="https://r4ds.hadley.nz/">R for Data Science</a></li>
 <li><a href="https://raps-with-r.dev/">Building reproducible analytical pipelines with R</a></li>
@@ -250,6 +270,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

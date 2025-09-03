@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./references.html" rel="next">
 <link href="./04-results.html" rel="prev">
+<link href="./cover.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,8 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9efe7b9a94af125cac77e404f8d58252.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c7e6d5637270657084b4f6d24548e230.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6caf7ae2e70015a08558cbc7735c4e5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-74dfd587a663655ed536814225b0bc6c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,6 +71,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2MWSHLX73Q"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2MWSHLX73Q', { 'anonymize_ip': true});
+</script>
 
 
 <meta property="og:title" content="5&nbsp; Conclusion – ARTE">
@@ -204,15 +214,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><br></p>
-<p>This section summarizes the purpose and benefits of the TIER Protocol 4.0 Dynamic Template.</p>
-<p>This template provides a comprehensive and structured pathway for researchers to create dynamic, reproducible research articles. By integrating tools like Quarto, TIER Protocol 4.0, Git, and Docker, it addresses the core requirements for modern, transparent, and robust scientific communication.</p>
+<p>This section summarizes the purpose and benefits of the ARTE: Article Reproducibility Template &amp; Envorinment.</p>
+<p>This template provides a comprehensive and structured pathway for researchers to create dynamic, reproducible research articles. By integrating tools like <a href="https://quarto.org">Quarto</a>, <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/">TIER Protocol 4.0</a>, <a href="https://github.com/">Git/GitHub</a>, and <a href="https://www.docker.com/">Docker</a>, it addresses the core requirements for modern, transparent, and robust scientific communication.</p>
 <p>Although your project must be auditable and replicable by your scripts and data, keep in mind that not everything in your scripts needs to be explicitly shown in your main narrative document. You can maintain detailed analysis workflows in the <code>Scripts/</code> folder. The main narrative (<code>.qmd</code> files) should focus on the story you are trying to tell, embedding only the most critical results and insights.</p>
 <p>The key advantages of using this template are:</p>
 <ol type="1">
-<li><strong>Enhanced Reproducibility:</strong> The combination of TIER structure, <code>renv</code>, and especially <strong>Docker</strong> ensures that your work can be replicated exactly by others.</li>
-<li><strong>Improved Organization:</strong> The predefined folder structure makes projects easier to navigate and understand.</li>
-<li><strong>Streamlined Workflow:</strong> Integration with RStudio and Quarto provides a smooth environment for writing, coding, and publishing.</li>
-<li><strong>Easy Sharing and Publishing:</strong> Built-in support for GitHub Pages and OSF facilitates open science practices.</li>
+<li><strong>Enhanced Reproducibility:</strong> The combination of <a href="https://rstudio.github.io/renv/">renv package</a> and <a href="https://www.docker.com/">Docker</a> ensures that your work can be replicated exactly by others.</li>
+<li><strong>Improved Organization:</strong> The predefined folder structure (<a href="https://www.projecttier.org/tier-protocol/protocol-4-0/">TIER Protocol 4.0</a>) makes projects easier to navigate and understand.</li>
+<li><strong>Streamlined Workflow:</strong> Integration with <a href="https://posit.co/download/rstudio-desktop/">RStudio</a> and <a href="https://quarto.org">Quarto</a> provides a smooth environment for writing, coding, and publishing.</li>
+<li><strong>Easy Sharing and Publishing:</strong> Built-in support for <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://osf.io/">OSF</a> facilitates open science practices.</li>
 <li><strong>Reduced Setup Time:</strong> Researchers can start new projects quickly with a pre-configured environment.</li>
 </ol>
 <p>This template is a practical tool for implementing the principles of reproducible research and open science. It lowers the technical barriers, allowing researchers to focus on their core research questions while ensuring best practices for transparency and replication are followed.</p>
