@@ -12,6 +12,12 @@ This deployment illustrates the project structure and the use of [**Quarto's boo
 
 <br>
 
+::: {.content-visible unless-format="pdf"}
+{{< video https://youtu.be/3YeX4G1w61E >}}
+:::
+
+<br>
+
 **How cite this template?**
 
 Rogers, P., & Limongi, R. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. *BAR - Brazilian Administration Review*, *22*(3),e250162. <https://doi.org/10.1590/1807-7692bar2025250162>

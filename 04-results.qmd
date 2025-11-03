@@ -18,4 +18,10 @@ To learn how it was done, follow the code in `Scripts/AnalysisScripts/data_visua
 
 This approach allows you to develop complex analyses in dedicated script files while selectively presenting the most relevant results in your main article narrative.
 
-To learn more about the embedding process discussed here, see the [Quarto embedding documentation](https://quarto.org/docs/authoring/notebook-embed.html).
+> To learn more about the embedding process discussed here, see the [Quarto embedding documentation](https://quarto.org/docs/authoring/notebook-embed.html).
+
+:::: {.content-visible unless-format="pdf"}
+::: callout-tip
+It should be noticed that the [rendered PDF copy of this article](https://github.com/phdpablo/article-template/blob/gh-pages/ARTE.pdf) does not include the video that appears on the website's homepage, as well as this tip.  Our use of the markup block `::: {.content-visible unless-format="pdf"}:::` is the cause of this.  You can leave the PDF as is to submit it to the journal while displaying extra components in the dynamic document.  Learn more at the [Quarto conditional content website](https://quarto.org/docs/authoring/conditional.html).
+:::
+::::

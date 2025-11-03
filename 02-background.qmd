@@ -16,7 +16,7 @@ The template is designed to support different levels of reproducibility, as illu
 -   **Proper Reproducibility:** Adding [Quarto](https://quarto.org) narrative (with [RStudio](https://posit.co/download/rstudio-desktop/) and [Git/GitHub](https://github.com/)) development and using [renv package](https://rstudio.github.io/renv/) for R package management.
 -   **Full Reproducibility (This Template's Strength):** Incorporating [Docker](https://www.docker.com/) to containerize the entire computational environment, ensuring maximum consistency and ease of replication. This is achieved using the files in the `docker/` folder.
 
-[![Roadmap for Developing a Dynamic and Reproducible Research Article with ARTE workflow. Illustration available at: https://doi.org/10.5281/zenodo.16883797](Output/roadmap1.jpg){#fig-roadmap width="100%"}](https://doi.org/10.5281/zenodo.16883797)
+[![Roadmap for Developing a Dynamic and Reproducible Research Article with ARTE workflow. Illustration available at: https://doi.org/10.5281/zenodo.17509258](Output/roadmap1.jpg){#fig-roadmap width="100%"}](https://doi.org/10.5281/zenodo.17509258)
 
 ## The Role of Dynamic Documents
 

@@ -90,4 +90,4 @@ format: # https://quarto.org/docs/reference/formats/html.html
     fig-align: left # Default horizontal alignment for figures in PDF.
     keep-tex: false # Keeps the intermediate .tex file generated during PDF creation.
 
-editor: visual # Sets the default editor mode to visual (WYSIWYG) in RStudio.
+editor: source # Sets the default editor mode to source (WYSIWYG) in RStudio.
