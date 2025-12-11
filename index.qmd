@@ -23,7 +23,6 @@ This deployment illustrates the project structure and the use of [**Quarto's boo
 Rogers, P., & Limongi, R. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Third Act. *BAR - Brazilian Administration Review*, *22*(3),e250162. <https://doi.org/10.1590/1807-7692bar2025250162>
 
 ::: {.content-visible unless-format="pdf"}
-
 **BibTex:**
 
 ``` r
@@ -48,3 +47,16 @@ Rogers, P., & Limongi, R. (2025). Open Science in Three Acts: Foundations, Pract
 Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - Second Act. *BAR - Brazilian Administration Review*, *22*(2), e250116. <https://doi.org/10.1590/1807-7692bar2025250116>
 
 Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - First Act. *BAR - Brazilian Administration Review*, *22*(1), e250079. <https://doi.org/10.1590/1807-7692bar2025250079>
+
+<br>
+
+::: {.content-visible unless-format="pdf"}
+**For Portuguese-speaking audiences**
+
+See this overview of ARTE implementation presented by Professor Pablo Rogers:
+
+{{< video https://youtu.be/tgZNCq9AW_s?si=XLpkqI7H699c6Qx8 >}}
+
+Learn a little about the tools used in ARTE in the course [Future-Proof Article: Open Science Journey in Practice](https://phdpablo.github.io/curso-open-science/)
+
+:::
