@@ -12,6 +12,7 @@ resources: # https://quarto.org/docs/projects/quarto-projects.html#project-resou
   - Output/
   - Scripts/
 execute: # https://quarto.org/docs/computations/execution-options.html
+  freeze: auto # Automatically manage code execution based on changes.
   warning: false # Prevent R code chunk warnings from appearing in the output.
 book: # https://quarto.org/docs/books/index.html
   google-analytics: "G-2MWSHLX73Q" # replace with your Google Analytics tracking ID or remove this line

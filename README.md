@@ -30,7 +30,7 @@ Prior to beginning this guide, you should also review the script shown in the ac
 -   [Citation](#citation)
 -   [License](#license)
 
-## Features {#features}
+## Features
 
 -   **TIER Protocol 4.0 Structure:** Organized folder structure (`Data/`, `Scripts/`, `Output/`) aligned with the [TIER Protocol](https://www.projecttier.org/tier-protocol/protocol-4-0/) for clear reproducibility.
 -   **Quarto Book Project:** Utilizes [Quarto's powerful book format](https://quarto.org/docs/books/) for creating rich, dynamic documents integrating text, code (R), and outputs.
@@ -42,7 +42,7 @@ Prior to beginning this guide, you should also review the script shown in the ac
 -   **Easy Deployment:** Configured for publication on GitHub Pages (gh-page branch) via GitHub Actions (`.github/workflows/deploy.yml`).
 -   **Sharing Platform:** Designed for sharing on the [Open Science Framework (OSF)](https://osf.io/).
 
-## Prerequisites {#prerequisites}
+## Prerequisites
 
 Before using this template for **Full Reproducibility**, ensure you have the following installed on your machine:
 
@@ -80,7 +80,7 @@ This method uses the pre-configured Docker setup for the easiest and most reprod
         -   **Windows:** Double-click `stop.bat`.
         -   **macOS/Linux:** Run `./stop.sh`.
 
-## Setup, Build, and Run (Detailed Docker Steps) {#setup-build-and-run-detailed-docker-steps}
+## Setup, Build, and Run (Detailed Docker Steps)
 
 If you prefer manual control or want to understand the process:
 
@@ -93,14 +93,14 @@ If you prefer manual control or want to understand the process:
 4.  **Stop the Container:**
     -   To stop and remove the container: `docker-compose down`
 
-## Accessing the RStudio Environment {#accessing-the-rstudio-environment}
+## Accessing the RStudio Environment
 
 -   **URL:** `http://127.0.0.x:8787` (The `start` scripts automatically open this).
 -   **Authentication:** No login required (`DISABLE_AUTH=true`).
 -   **User:** You are logged in as the `rstudio` user.
 -   **Project Location (in Container):** `/home/rstudio/project` (This is your local project folder mounted inside the container).
 
-## Daily Workflow {#daily-workflow}
+## Daily Workflow
 
 1.  **Start:** Use `docker/start.bat` or `docker/start.sh`.
 2.  **Work in RStudio:**
@@ -112,19 +112,19 @@ If you prefer manual control or want to understand the process:
     -   Use `quarto render` in the Terminal to build your outputs (HTML, PDF).
 3.  **Stop:** Use `docker/stop.bat` or `docker/stop.sh` when done.
 
-## Environment Features {#environment-features}
+## Environment Features
 
 -   **Base Image:** `rocker/verse:4.5.1` (Includes R, RStudio Server, Quarto, Pandoc, TinyTeX).
 -   **R Package Management:** `renv` is pre-configured.
     -   **Library Path:** `/renv/library` (Mounted as a Docker volume for persistence).
     -   **Cache Path:** `/renv/cache` (Mounted as a Docker volume for faster reinstalls and sharing between projects).
     -   **Packages:** Core packages defined in `renv.lock` are restored during the Docker image build for the first render.
--   **LaTeX/TinyTeX:** Essential LaTeX packages (`amsfonts`, `unicode-math`, `booktabs`, `caption`, `float`) are pre-installed in the Docker image.
+-   **LaTeX/TinyTeX:** Essential LaTeX packages are pre-installed in the Docker image and persist in the `texlive_data` volume.
 -   **Data Persistence:** Your project directory (`..` relative to `docker/`) is mounted to `/home/rstudio/project`.
 -   **RStudio Settings Persistence:** RStudio configuration (`.config`, `.local`, `.rstudio`, `.R`) is stored in `docker/cache/` and mounted into the container, preserving your layout and preferences per project.
 -   **Port Management:** The `start` scripts automatically find an open port starting from `127.0.0.1:8787`.
 
-## Useful Commands {#useful-commands}
+## Useful Commands
 
 -   **Inside RStudio Terminal:**
     -   `quarto render`: Render the entire book/project.
@@ -138,7 +138,7 @@ If you prefer manual control or want to understand the process:
     -   `docker volume ls`: List Docker volumes (to see `renv_cache`, `renv_library`).
     -   `docker volume prune`: Remove unused Docker volumes (use with caution).
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting
 
 -   **Docker not running:** Ensure the Docker Desktop application (or Docker daemon on Linux) is started.
 -   **Port in use:** The `start` scripts automatically find the next available port. Check the terminal output for the URL.
@@ -149,7 +149,7 @@ If you prefer manual control or want to understand the process:
 -   **Packages not found after restart:** Ensure `renv` is activated (opening `article-template.Rproj` usually does this) and run `renv::restore()` if needed.
 -   **RStudio settings not persisting:** Ensure the `docker/cache` directory exists and has the correct permissions.
 
-## Publishing Your Article {#publishing-your-article}
+## Publishing Your Article
 
 This template is configured for easy publication on GitHub Pages using GitHub Actions.
 
@@ -172,7 +172,7 @@ This template is configured for easy publication on GitHub Pages using GitHub Ac
 5.  **View Your Site:**
     -   After the workflow completes successfully, your site will be available at `https://<your-github-username>.github.io/<your-repo-name>/`.
 
-## Important Notes {#important-notes}
+## Important Notes
 
 -   **Project Structure:** The main narrative files (`.qmd`) and configuration (`_quarto.yml`, `references.bib`, etc.) are in the **root** of the repository. Docker mounts this root directory to `/home/rstudio/project` inside the container.
 -   **Docker Context:** The `docker-compose.yml` uses `..` (the project root) as the build context, allowing the Dockerfile to access files like `renv.lock`.
@@ -180,7 +180,7 @@ This template is configured for easy publication on GitHub Pages using GitHub Ac
 -   **Git Integration:** While the Docker environment provides isolation, you should still use Git locally on your host machine for version control of your project files.
 -   **Administrative Files:** The `Adm/` folder is intended for administrative files and is ignored by Git (via `.gitignore`) and not published to GitHub Pages.
 
-## Citation {#citation}
+## Citation
 
 If you use this template, please cite it as:
 
@@ -208,6 +208,6 @@ Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Pract
 
 Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Practice, and Implementation - First Act. *BAR - Brazilian Administration Review*, *22*(1), e250079. <https://doi.org/10.1590/1807-7692bar2025250079>
 
-## License {#license}
+## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License - see the [LICENSE](LICENSE) file for details.
