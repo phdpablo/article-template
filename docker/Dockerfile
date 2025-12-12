@@ -62,7 +62,10 @@ RUN R -s -e "renv::restore()"
 # or are not managed directly by renv (which manages R packages).
 # tinytex::tlmgr_install is the R function from the 'tinytex' package
 # that calls the TeX Live manager (tlmgr) to install LaTeX packages.
-RUN R -e "tinytex::tlmgr_install(c('amsfonts', 'unicode-math', 'booktabs', 'caption', 'float'))"
+# Update tlmgr and LaTeX kernel first
+RUN tlmgr update --self --all
+# Then install the required packages
+RUN R -e "tinytex::tlmgr_install(c('amsfonts', 'unicode-math', 'booktabs', 'caption', 'float', 'pgf', 'environ', 'pdfcol', 'fontawesome5', 'tcolorbox'))"
 
 # Note: Port 8787 (default for RStudio Server) is automatically exposed by the base image.
 # An explicit CMD is not needed as the base image already defines the command to start RStudio Server.

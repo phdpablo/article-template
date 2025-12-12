@@ -59,6 +59,14 @@ services:
       # but the volume persists. (Note: Project-local library is often preferred for isolation).
       - renv_library:/renv/library
 
+      # --- TeX Live Distribution Volume ---
+      # Mounts a named Docker volume for the TeX Live installation (TinyTeX).
+      # This volume stores the LaTeX packages and fonts needed for PDF rendering.
+      # Persisting this volume prevents reinstallation of LaTeX packages when
+      # the container is recreated, saving time and bandwidth.
+      - texlive_data:/usr/local/texlive
+
+
       # --- RStudio Configuration Caches (Local to Project) ---
       # These volumes persist RStudio settings (appearance, layout, history, etc.)
       # specific to this project instance. They are stored in the 'docker/cache' directory
@@ -95,7 +103,7 @@ services:
     #    and the cache/configuration directories. This is important for read/write permissions.
     # 2. Starts the main process: Executes the '/init' script, which is the standard way
     #    to start RStudio Server in the rocker/verse image.
-    command: ["/bin/sh", "-c", "chown -R rstudio:rstudio /home/rstudio/project /renv /home/rstudio/.config /home/rstudio/.local /home/rstudio/.rstudio /home/rstudio/.R && /init"]
+    command: ["/bin/sh", "-c", "chown -R rstudio:rstudio /home/rstudio/project /renv /home/rstudio/.config /home/rstudio/.local /home/rstudio/.rstudio /home/rstudio/.R /usr/local/texlive && /init"]
     
     # --- Restart Policy ---
     # Defines the container's restart behavior.
@@ -119,3 +127,10 @@ volumes:
   renv_library:
     # Explicitly name the volume.
     name: renv_library
+
+  # --- TeX Live Distribution Volume ---
+  # Named volume for storing the TeX Live installation and packages.
+  # Shared across container recreations to preserve installed LaTeX packages.
+  texlive_data:
+    # Explicitly name the volume.
+    name: texlive_data
