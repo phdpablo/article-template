@@ -15,26 +15,6 @@ FROM rocker/binder:4.4.2
 LABEL maintainer="Pablo Rogers <pablorogers@ufu.br>" \
       description="MyBinder environment for ARTE"
 
-# --- renv Configuration ---
-# Set environment variables to configure where renv stores its cache
-# and the installed package library.
-# These paths are used to ensure renv functions correctly inside the container.
-ENV RENV_PATHS_CACHE=/home/rstudio/renv/cache
-# Path for the global renv cache (stores . tar.gz of downloaded packages).
-ENV RENV_PATHS_LIBRARY=/home/rstudio/renv/library
-# Path for the R package library installed by renv for this project. 
-
-# --- Copy renv Configuration Files ---
-# Copy necessary renv files from the build context (your local system)
-# to the home directory inside the container.
-# These files are essential for renv to function correctly.
-COPY --chown=rstudio renv.lock /home/rstudio/renv.lock
-# The lock file defining the exact versions of R packages. 
-COPY --chown=rstudio .Rprofile /home/rstudio/.Rprofile
-# The profile file that activates renv when R starts.
-COPY --chown=rstudio renv/activate.R /home/rstudio/renv/activate.R
-# The renv activation script. 
-
 # --- Copy Project Files ---
 # Copy the entire project to the container's home directory. 
 # This includes all source files, data, and documentation. 
