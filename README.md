@@ -1,6 +1,6 @@
 # ARTE: Article Reproducibility Template & Envorinment
 
-[![Cite BAR Article](https://img.shields.io/badge/Cite%20BAR%20Article-PDF-red)](https://bar.anpad.org.br/index.php/bar/article/view/722) [![TIER Protocol 4.0](https://img.shields.io/badge/TIER%20Protocol-4.0-green)](https://www.projecttier.org/tier-protocol/protocol-4-0/) [![GitHub Pages](https://img.shields.io/github/deployments/phdpablo/article-template/github-pages?label=GitHub%20Pages)](https://phdpablo.github.io/article-template/) [![OSF](https://img.shields.io/badge/OSF-10.17605/OSF.IO/NJDQ5-blue)](https://osf.io/njdq5/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17057679.svg)](https://doi.org/10.5281/zenodo.17057679) [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![R version](https://img.shields.io/badge/R-4.5.1-orange)](https://www.r-project.org/) [![Quarto](https://img.shields.io/badge/Quarto-1.6.42-orange)](https://quarto.org/) [![Docker](https://img.shields.io/badge/Docker-4.45.0-orange)](https://www.docker.com/) [![renv](https://img.shields.io/badge/renv-1.1.4-orange)](https://rstudio.github.io/renv/)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/phdpablo/article-template/main) [![Cite BAR Article](https://img.shields.io/badge/Cite%20BAR%20Article-PDF-red)](https://bar.anpad.org.br/index.php/bar/article/view/722) [![TIER Protocol 4.0](https://img.shields.io/badge/TIER%20Protocol-4.0-green)](https://www.projecttier.org/tier-protocol/protocol-4-0/) [![GitHub Pages](https://img.shields.io/github/deployments/phdpablo/article-template/github-pages?label=GitHub%20Pages)](https://phdpablo.github.io/article-template/) [![OSF](https://img.shields.io/badge/OSF-10.17605/OSF.IO/NJDQ5-blue)](https://osf.io/njdq5/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17057679.svg)](https://doi.org/10.5281/zenodo.17057679) [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![R version](https://img.shields.io/badge/R-4.5.1-orange)](https://www.r-project.org/) [![Quarto](https://img.shields.io/badge/Quarto-1.6.42-orange)](https://quarto.org/) [![Docker](https://img.shields.io/badge/Docker-4.45.0-orange)](https://www.docker.com/) [![renv](https://img.shields.io/badge/renv-1.1.4-orange)](https://rstudio.github.io/renv/)
 
 This repository provides a template for creating a **dynamic and fully reproducible research article** using **Quarto**, **RStudio**, the **TIER Protocol 4.0**, and **Docker**. It offers a structured project organization, integrates seamlessly with Git/GitHub for version control, and is configured for easy publication on **GitHub Pages** and **OSF**.
 
@@ -41,6 +41,20 @@ Prior to beginning this guide, you should also review the script shown in the ac
 -   **Automated Cleanup:** Includes a script (`render_cleanup.R`) to tidy up temporary files after rendering.
 -   **Easy Deployment:** Configured for publication on GitHub Pages (gh-page branch) via GitHub Actions (`.github/workflows/deploy.yml`).
 -   **Sharing Platform:** Designed for sharing on the [Open Science Framework (OSF)](https://osf.io/).
+
+### Verify Reproducibility with MyBinder
+
+You can verify the full reproducibility of this project without any local installation using MyBinder:
+
+1. Click the Binder badge above
+2. Wait for the environment to build (10-15)
+3. Once loaded, open RStudio from the JupyterHub interface
+4. Run `quarto render` in the Terminal
+5. View the rendered output in `docs/index.html`
+
+This cloud-based environment uses the exact same configuration defined in `.binder/Dockerfile` and `renv.lock`, ensuring complete reproducibility.
+
+For detailed instructions, see [`.binder/README.md`](.binder/README.md).
 
 ## Prerequisites
 

@@ -18,6 +18,25 @@ The template is designed to support different levels of reproducibility, as illu
 
 [![Roadmap for Developing a Dynamic and Reproducible Research Article with ARTE workflow. Illustration available at: https://doi.org/10.5281/zenodo.17509258](Output/roadmap1.jpg){#fig-roadmap width="100%"}](https://doi.org/10.5281/zenodo.17509258)
 
+### Cloud-Based Reproducibility Verification
+
+Beyond local reproducibility tools, ARTE integrates [MyBinder](https://mybinder.org/) for cloud-based verification. [MyBinder](https://mybinder.org/) creates executable environments from GitHub repositories, allowing reviewers and readers to:
+
+- Launch a complete R environment in their web browser
+- Execute the full computational pipeline without any installation
+- Verify results independently across different systems
+- Explore and interact with the analysis interactively
+
+This addresses a critical barrier in reproducibility: while many researchers share code and data, technical difficulties often prevent independent verification. [MyBinder](https://mybinder.org/) removes this friction by providing one-click access to a working environment. 
+
+::: {.content-visible unless-format="pdf"} 
+Click the badge below to launch ARTE in your browser:
+
+[![](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/phdpablo/article-template/main)
+
+**Considerations**:  [MyBinder](https://mybinder.org/) is ideal for small to moderate projects. For computationally intensive research, the Docker-based local environment is recommended, while Binder serves as a lightweight verification tool.  See [. binder/README.md](https://github.com/phdpablo/article-template/blob/main/.binder/README.md) for details.
+:::
+
 ## The Role of Dynamic Documents
 
 Dynamic documents, like the ones created with [Quarto](https://quarto.org) (`.qmd` files), play a crucial role. They allow the narrative of your research to be directly linked to the analysis code. When you render the document, the code is executed, and the results (tables, figures, numbers) are automatically inserted into the text. This reduces manual errors and ensures that your narrative always reflects the latest analysis.

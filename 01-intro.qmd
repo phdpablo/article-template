@@ -6,6 +6,8 @@ This section introduces the **ARTE: Article Reproducibility Template & Environme
 
 This template is designed for researchers, particularly in the applied social sciences, who want to create **dynamic and reproducible research articles**. It aims to make the principles of reproducible research more accessible by providing a pre-structured project environment.
 
+ARTE also provides cloud-based reproducibility verification via [MyBinder](https://mybinder.org/), allowing anyone to verify the computational workflow without local installation.
+
 The template integrates several key tools and practices:
 
 -   [**Quarto's book:**](https://quarto.org/docs/books/) For authoring dynamic documents that seamlessly blend narrative text, executable code (R), and the resulting outputs (tables, figures). *This document you are reading is an example of a Quarto book*.

@@ -20,6 +20,7 @@ This template itself is the "method". It prescribes a specific way to organize a
 4.  **Environment Management:**
     -   [**renv:**](https://rstudio.github.io/renv/) (Proper Reproducibility) Tracks and restores specific R package versions used in the project. The `renv.lock` file is the key component.
     -   [**Docker:**](https://www.docker.com/) (Full Reproducibility) Packages the entire software environment (R, RStudio, Quarto, packages, LaTeX) into a container. This guarantees that the environment is identical for anyone running the project. The `docker/` folder contains the necessary configuration (`Dockerfile`, `docker-compose.yml`, `start/stop` scripts).
+    -   [**MyBinder**](https://mybinder.org/): Cloud platform for reproducibility verification.  Provides one-click browser-based access to a complete computational environment, enabling verification without local installation (`.binder/Dockerfile`)
 5.  **Sharing & Publication:**
     -   [**OSF:**](https://osf.io/) A platform for registering, storing, and sharing research materials openly.
     -   [**GitHub Pages:**](https://pages.github.com/) A free service to host the rendered HTML version of your Quarto book/article directly from your GitHub repository. The `.github/workflows/deploy.yml` file automates this process.

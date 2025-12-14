@@ -10,7 +10,7 @@ Although your project must be auditable and replicable by your scripts and data,
 
 The key advantages of using this template are:
 
-1.  **Enhanced Reproducibility:** The combination of [renv package](https://rstudio.github.io/renv/) and [Docker](https://www.docker.com/) ensures that your work can be replicated exactly by others.
+1.  **Enhanced Reproducibility:** The combination of [renv package](https://rstudio.github.io/renv/) and [Docker](https://www.docker.com/) ensures that your work can be replicated exactly by others. [MyBinder](https://mybinder.org/) eliminates technical barriers to reproducibility verification.
 2.  **Improved Organization:** The predefined folder structure ([TIER Protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/)) makes projects easier to navigate and understand.
 3.  **Streamlined Workflow:** Integration with [RStudio](https://posit.co/download/rstudio-desktop/) and [Quarto](https://quarto.org) provides a smooth environment for writing, coding, and publishing.
 4.  **Easy Sharing and Publishing:** Built-in support for [GitHub Pages](https://pages.github.com/) and [OSF](https://osf.io/) facilitates open science practices.

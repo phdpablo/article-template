@@ -9,6 +9,7 @@
 _book/
 _site/
 _temp/
+_freeze/
 /site_libs/
 /04-results_files/
 docs/
@@ -18,5 +19,4 @@ docs/
 deploy.sh
 adm/
 !adm/README.md
-
 /.quarto/

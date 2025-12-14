@@ -4,11 +4,11 @@
 
 This document is a deployment of the **ARTE: Article Reproducibility Template & Environment**. It serves as an example of how the template can be used and showcases its features. This template provides a structured framework for creating **dynamic and fully reproducible research articles** using [**Quarto**](https://quarto.org), integrated with [**RStudio**](https://posit.co/download/rstudio-desktop/), [**Git/GitHub**](https://git-scm.com/), and designed for sharing on platforms like [**OSF**](https://osf.io/) and [**GitHub Pages**](https://docs.github.com/pages).
 
-The template is organized according to the [**TIER Protocol 4.0**](https://www.projecttier.org/tier-protocol/protocol-4-0/), ensuring clarity and reproducibility. It is pre-configured for environment management using [**renv**](https://rstudio.github.io/renv/) and [**Docker**](https://www.docker.com/), guaranteeing that the computational environment is consistent and reproducible. This example demonstrates the integration of narrative text, executable R code, and outputs (like tables and figures) within a single, cohesive document.
+The template is organized according to the [**TIER Protocol 4.0**](https://www.projecttier.org/tier-protocol/protocol-4-0/), ensuring clarity and reproducibility. It is pre-configured for environment management using [**renv**](https://rstudio.github.io/renv/) and [**Docker**](https://www.docker.com/), guaranteeing that the computational environment is consistent and reproducible both locally and in the cloud via [**MyBinder**](https://mybinder.org/). This example demonstrates the integration of narrative text, executable R code, and outputs (like tables and figures) within a single, cohesive document.
 
 This deployment illustrates the project structure and the use of [**Quarto's book format**](https://quarto.org/docs/books/). It is not a research article on a specific topic but a guide on how to use the template itself.
 
-**Key-words:** Open Science, Reproducibility, [Quarto](https://quarto.org), [TIER Protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/), [R language](https://cran.r-project.org/), [RStudio](https://posit.co/download/rstudio-desktop/), [Git](https://git-scm.com/), [GitHub](https://github.com/), [renv package](https://rstudio.github.io/renv/), [Docker](https://www.docker.com/), [GitHub Pages](https://pages.github.com/), [OSF](https://osf.io/).
+**Key-words:** Open Science, Reproducibility, [Quarto](https://quarto.org), [TIER Protocol 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/), [R language](https://cran.r-project.org/), [RStudio](https://posit.co/download/rstudio-desktop/), [Git](https://git-scm.com/), [GitHub](https://github.com/), [renv package](https://rstudio.github.io/renv/), [Docker](https://www.docker.com/), [**MyBinder**](https://mybinder.org/),  [GitHub Pages](https://pages.github.com/), [OSF](https://osf.io/).
 
 <br>
 
@@ -51,6 +51,12 @@ Limongi, R., & Rogers, P. (2025). Open Science in Three Acts: Foundations, Pract
 <br>
 
 ::: {.content-visible unless-format="pdf"}
+**Summary of editorials:**
+
+See a conceptual summary of these three editorials **[HERE](https://phdpablo.github.io/arte-showcase/)**
+
+<br>
+
 **For Portuguese-speaking audiences**
 
 See this overview of ARTE implementation presented by Professor Pablo Rogers:
