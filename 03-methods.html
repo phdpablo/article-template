@@ -243,6 +243,7 @@ gtag('config', 'G-2MWSHLX73Q', { 'anonymize_ip': true});
 <ul>
 <li><a href="https://rstudio.github.io/renv/"><strong>renv:</strong></a> (Proper Reproducibility) Tracks and restores specific R package versions used in the project. The <code>renv.lock</code> file is the key component.</li>
 <li><a href="https://www.docker.com/"><strong>Docker:</strong></a> (Full Reproducibility) Packages the entire software environment (R, RStudio, Quarto, packages, LaTeX) into a container. This guarantees that the environment is identical for anyone running the project. The <code>docker/</code> folder contains the necessary configuration (<code>Dockerfile</code>, <code>docker-compose.yml</code>, <code>start/stop</code> scripts).</li>
+<li><a href="https://mybinder.org/"><strong>MyBinder</strong></a>: Cloud platform for reproducibility verification. Provides one-click browser-based access to a complete computational environment, enabling verification without local installation (<code>.binder/Dockerfile</code>)</li>
 </ul></li>
 <li><strong>Sharing &amp; Publication:</strong>
 <ul>

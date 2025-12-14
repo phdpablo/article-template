@@ -227,7 +227,10 @@ gtag('config', 'G-2MWSHLX73Q', { 'anonymize_ip': true});
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#reproducibility-levels" id="toc-reproducibility-levels" class="nav-link active" data-scroll-target="#reproducibility-levels"><span class="header-section-number">2.1</span> Reproducibility Levels</a></li>
+  <li><a href="#reproducibility-levels" id="toc-reproducibility-levels" class="nav-link active" data-scroll-target="#reproducibility-levels"><span class="header-section-number">2.1</span> Reproducibility Levels</a>
+  <ul class="collapse">
+  <li><a href="#cloud-based-reproducibility-verification" id="toc-cloud-based-reproducibility-verification" class="nav-link" data-scroll-target="#cloud-based-reproducibility-verification"><span class="header-section-number">2.1.1</span> Cloud-Based Reproducibility Verification</a></li>
+  </ul></li>
   <li><a href="#the-role-of-dynamic-documents" id="toc-the-role-of-dynamic-documents" class="nav-link" data-scroll-target="#the-role-of-dynamic-documents"><span class="header-section-number">2.2</span> The Role of Dynamic Documents</a></li>
   <li><a href="#tier-protocol-4.0-structure" id="toc-tier-protocol-4.0-structure" class="nav-link" data-scroll-target="#tier-protocol-4.0-structure"><span class="header-section-number">2.3</span> TIER Protocol 4.0 Structure</a></li>
   </ul>
@@ -264,6 +267,20 @@ Figure&nbsp;2.1: Roadmap for Developing a Dynamic and Reproducible Research Arti
 </figcaption>
 </figure>
 </div>
+<section id="cloud-based-reproducibility-verification" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="cloud-based-reproducibility-verification"><span class="header-section-number">2.1.1</span> Cloud-Based Reproducibility Verification</h3>
+<p>Beyond local reproducibility tools, ARTE integrates <a href="https://mybinder.org/">MyBinder</a> for cloud-based verification. <a href="https://mybinder.org/">MyBinder</a> creates executable environments from GitHub repositories, allowing reviewers and readers to:</p>
+<ul>
+<li>Launch a complete R environment in their web browser</li>
+<li>Execute the full computational pipeline without any installation</li>
+<li>Verify results independently across different systems</li>
+<li>Explore and interact with the analysis interactively</li>
+</ul>
+<p>This addresses a critical barrier in reproducibility: while many researchers share code and data, technical difficulties often prevent independent verification. <a href="https://mybinder.org/">MyBinder</a> removes this friction by providing one-click access to a working environment.</p>
+<p>Click the badge below to launch ARTE in your browser:</p>
+<p><a href="https://mybinder.org/v2/gh/phdpablo/article-template/main"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid"></a></p>
+<p><strong>Considerations</strong>: <a href="https://mybinder.org/">MyBinder</a> is ideal for small to moderate projects. For computationally intensive research, the Docker-based local environment is recommended, while Binder serves as a lightweight verification tool. See <a href="https://github.com/phdpablo/article-template/blob/main/.binder/README.md">. binder/README.md</a> for details.</p>
+</section>
 </section>
 <section id="the-role-of-dynamic-documents" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="the-role-of-dynamic-documents"><span class="header-section-number">2.2</span> The Role of Dynamic Documents</h2>
