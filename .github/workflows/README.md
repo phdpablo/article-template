@@ -38,6 +38,6 @@ This workflow file (`deploy.yml`) is already included in the template. To make i
         -   Go to the **Actions** tab of your GitHub repository.
         -   Click on **Deploy Quarto Website** in the left sidebar list of workflows.
         -   Click the **Run workflow** button (usually a dropdown/dark blue button) and confirm.
-5.  **View Your Website:** After the workflow runs successfully (you can see the status in the **Actions** tab), your website will be available at `https://your-username.github.io/your-repository-name/`. It might take a twelve or thirteen minute after the workflow completes for the site to update.
+5.  **View Your Website:** After the workflow runs successfully (you can see the status in the **Actions** tab), your website will be available at `https://your-username.github.io/your-repository-name/`. It might take a two or three minutes after the workflow completes for the site to update.
 
 This automation ensures that your published website is always up-to-date with the latest version of your `main` branch.

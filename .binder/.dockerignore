@@ -1,0 +1,39 @@
+# Local development
+docker/
+
+# Git and GitHub
+.git/
+.github/
+
+# Generated outputs
+*. pdf
+docs/
+_site/
+
+# Quarto cache
+.quarto/
+_freeze/
+
+# renv cache (will be recreated in container)
+renv/library/
+renv/local/
+renv/cellar/
+renv/sandbox/
+renv/python/
+renv/staging/
+
+# R temporary files
+.Rhistory
+. RData
+.Rproj. user/
+
+# Python
+__pycache__/
+*.pyc
+. venv/
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
